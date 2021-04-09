@@ -1,0 +1,4 @@
+#! /bin/bash
+
+sudo ln -s ~/gfkl/linux/gfkl /usr/share/X11/xkb/symbols/gfkl
+setxkbmap -layout gfkl -model pc105
