@@ -65,7 +65,7 @@ xkb_symbols "basic" {
 			Redirect(key = <PGDN>, clearmods = LevelFive),
 			Redirect(key = <PGDN>, clearmods = LevelFive)]};
 	key<AD08> { [   u,          U,		NoSymbol,	NoSymbol,	Home,		Home	]};
-    key<AD09> { [   i,          I,		NoSymbol,	NoSymbol,	Left,		Left	],
+    key<AD09> { [   i,          I,		ampersand,	NoSymbol,	Left,		Left	],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(), 
 			Redirect(key = <LEFT>, mods = Control, clearmods = LevelFive),
 			Redirect(key = <LEFT>, mods = Control + Shift, clearmods = LevelFive)]};
@@ -107,17 +107,11 @@ xkb_symbols "basic" {
 			Redirect(key = <AC04>, mods = Control, clearmods = LevelFive),
 			Redirect(key = <FK04>, clearmods = LevelFive),
 			Redirect(key = <FK04>, clearmods = LevelFive)]};
-    key<AC05> { [   g,          G,          5,          NoSymbol,	XF86AudioLowerVolume, NoSymbol,	F5,	F5],
+    key<AC05> { [   g,          G,          NoSymbol,     NoSymbol,	XF86AudioLowerVolume, NoSymbol],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
-			Redirect(key=<VOL->, clearmods=all),
-			NoAction(),
-			Redirect(key = <FK05>, clearmods = LevelFive),
-			Redirect(key = <FK05>, clearmods = LevelFive)]};
+			Redirect(key=<VOL->, clearmods=all),	NoAction()]};
     key<AC06> { [   NoSymbol,   NoSymbol,   NoSymbol,   NoSymbol    ]};
-    key<AC07> { [   h,          H,          6,          NoSymbol,	Left,		Left,	F6,	F6],
-		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
-			Redirect(key = <FK06>, clearmods = LevelFive),
-			Redirect(key = <FK06>, clearmods = LevelFive)]};
+    key<AC07> { [   h,          H,          NoSymbol,   NoSymbol,	Left,		Left	]};
     key<AC08> { [   j,          J,          7,          NoSymbol,	Down,		Down,	F7,	F7],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <FK07>, clearmods = LevelFive),
@@ -142,54 +136,7 @@ xkb_symbols "basic" {
 
 
 
-
-    key<LSGT> { [   slash,      question,	slash,		question	]};
-    key<AB01> { [   z,          Z,			U00E6,      U00C6,		Undo,		Redo        ],
-		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
-			Redirect(key = <AB01>, mods = Control, clearmods = LevelFive), 
-			Redirect(key = <AB01>, mods = Shift + Control, clearmods = LevelFive)]};
-    key<AB02> { [   x,          X,      U00F8,      U00D8,		XF86Cut,	XF86Cut     ],
-		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
-      		Redirect(key = <AB02>, mods = Control, clearmods = LevelFive), 
-			Redirect(key = <AB02>, mods = Shift + Control, clearmods = LevelFive)]};
-    key<AB03> { [   c,          C,      U00E5,      U00C5,		XF86Copy,	XF86Copy	],
-		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
-			Redirect(key = <AB03>, mods = Control, clearmods = LevelFive), 
-			Redirect(key = <AB03>, mods = Shift + Control, clearmods = LevelFive)]};
-    key<AB04> { [   v,          V,		NoSymbol,	NoSymbol,	XF86Paste,	XF86Paste   ],
-		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
-			Redirect(key = <AB04>, mods = Control, clearmods = LevelFive), 
-			Redirect(key = <AB04>, mods = Shift + Control, clearmods = LevelFive)]};
-    key<AB05> { [   b,          B          ]};
-	key<AB06> { [   backslash,  bar,        backslash,	bar,		Caps_Lock,	Caps_Lock],
-		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
-			LockMods(mods=Lock), LockMods(mods=Lock)]};
-	key<AB07> { [   n,          N,			NoSymbol,	NoSymbol,	Insert,		Insert		]};
-	key<AB08> { [   m,          M,      	ampersand,  NoSymbol,	Menu,		Menu		]};
-	key<AB09> { [   comma,      less,       comma,		less,		BackSpace,	BackSpace	],
-		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
-			Redirect(key = <BKSP>, mods = Control, clearmods = LevelFive),
-			Redirect(key = <BKSP>, mods = Control, clearmods = LevelFive)]};
-    key<AB10> { [   period,     greater,	period,		greater,	Delete,		Delete		],
-		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
-			Redirect(key = <DELE>, mods = Control, clearmods = LevelFive),
-			Redirect(key = <DELE>, mods = Control, clearmods = LevelFive)]};
-};
-
-partial alphanumeric_keys modifier_keys
-xkb_symbols "ortho" {
-	include "gfkl(basic)"
-	name[Group1] = "Greatest Layout Ortho";
-	include "level3(ralt_switch)"
-	include "level5(caps_switch)"
-
-	key.type[Group1] = "EIGHT_LEVEL";
-
-
-
-
-
-    key<LSGT> { [   z,          Z,			U00E6,      U00C6,		Undo,		Redo        ],
+	key<LSGT> { [   z,          Z,			U00E6,      U00C6,		Undo,		Redo        ],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <AB01>, mods = Control, clearmods = LevelFive), 
 			Redirect(key = <AB01>, mods = Shift + Control, clearmods = LevelFive)]};
@@ -201,17 +148,36 @@ xkb_symbols "ortho" {
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <AB03>, mods = Control, clearmods = LevelFive), 
 			Redirect(key = <AB03>, mods = Shift + Control, clearmods = LevelFive)]};
-    key<AB03> { [   b,          B]};
+    key<AB03> { [   b,          B,	5,	NoSymbol,	NoSymbol,	NoSymbol,	F5,	F5],
+		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
+			Redirect(key = <FK05>, clearmods = LevelFive),
+			Redirect(key = <FK05>, clearmods = LevelFive)]};
     key<AB04> { [   v,          V,		NoSymbol,	NoSymbol,	XF86Paste,	XF86Paste  ],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <AB04>, mods = Control, clearmods = LevelFive), 
 			Redirect(key = <AB04>, mods = Shift + Control, clearmods = LevelFive)]};
 	key<AB05> { [   slash,      question,	slash,		question	]};
+	key<AB06> { [   backslash,  bar,        backslash,	bar,		Caps_Lock,	Caps_Lock],
+		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
+			LockMods(mods=Lock), LockMods(mods=Lock)]};
+	key<AB07> { [   n,          N,			NoSymbol,	NoSymbol,	Insert,		Insert]};
+	key<AB08> { [   m,          M,      	6,  NoSymbol,	Menu,	Menu,	F6,	F6],
+		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
+			Redirect(key = <FK06>, clearmods = LevelFive),
+			Redirect(key = <FK06>, clearmods = LevelFive)]};
+	key<AB09> { [   comma,      less,       comma,		less,		BackSpace,	BackSpace	],
+		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+			Redirect(key = <BKSP>, mods = Control, clearmods = LevelFive),
+			Redirect(key = <BKSP>, mods = Control, clearmods = LevelFive)]};
+    key<AB10> { [   period,     greater,	period,		greater,	Delete,		Delete		],
+		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+			Redirect(key = <DELE>, mods = Control, clearmods = LevelFive),
+			Redirect(key = <DELE>, mods = Control, clearmods = LevelFive)]};
 };
 
 partial alphanumeric_keys modifier_keys
 xkb_symbols "tarmak1" {
-	include "gfkl(ortho)"
+	include "gfkl(basic)"
 	name[Group1] = "Greatest Layout tarmak1";
 	include "level3(ralt_switch)"
 	include "level5(caps_switch)"
@@ -221,10 +187,7 @@ xkb_symbols "tarmak1" {
     key<AD03> { [   j,          J,		NoSymbol,	dead_acute,	XF86AudioNext],
 			actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<I171>, clearmods=all)]};
-    key<AC07> { [   m,          M,          6,          NoSymbol,	Left,		Left,	F6,	F6],
-		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
-			Redirect(key = <FK06>, clearmods = LevelFive),
-			Redirect(key = <FK06>, clearmods = LevelFive)]};
+    key<AC07> { [   m,          M,          NoSymbol,   NoSymbol,	Left,		Left]};
     key<AC08> { [   n,          N,          7,          NoSymbol,	Down,		Down,	F7,	F7],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <FK07>, clearmods = LevelFive),
@@ -235,7 +198,10 @@ xkb_symbols "tarmak1" {
 			Redirect(key = <FK08>, clearmods = LevelFive)]};
 
 	key<AB07> { [   k,          K,			NoSymbol,	NoSymbol,	Insert,		Insert		]};
-	key<AB08> { [   h,          H,      	ampersand,  NoSymbol,	Menu,		Menu		]};
+	key<AB08> { [   h,          H,      	6,  NoSymbol,	Menu,		Menu,	F6,	F6],
+		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
+			Redirect(key = <FK06>, clearmods = LevelFive),
+			Redirect(key = <FK06>, clearmods = LevelFive)]};
 };
 
 partial alphanumeric_keys modifier_keys
@@ -261,7 +227,10 @@ xkb_symbols "tarmak2" {
 			Redirect(key = <FK04>, clearmods = LevelFive),
 			Redirect(key = <FK04>, clearmods = LevelFive)]};
 
-    key<AB03> { [   j,          J]};
+    key<AB03> { [   j,          J,	5,	NoSymbol,	Menu,	Menu,	F5,	F5],
+		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
+			Redirect(key = <FK05>, clearmods = LevelFive),
+			Redirect(key = <FK05>, clearmods = LevelFive)]};
 
 };
 
@@ -289,7 +258,10 @@ xkb_symbols "tarmak3" {
 			Redirect(key = <FK03>, clearmods = LevelFive),
 			Redirect(key = <FK03>, clearmods = LevelFive)]};
 
-    key<AB03> { [   d,          D]};
+    key<AB03> { [   d,          D,	5,	NoSymbol,	Menu,	Menu,	F5,	F5],
+		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
+			Redirect(key = <FK05>, clearmods = LevelFive),
+			Redirect(key = <FK05>, clearmods = LevelFive)]};
 };
 
 partial alphanumeric_keys modifier_keys
@@ -329,7 +301,7 @@ xkb_symbols "colemak" {
  
     key.type[Group1] = "EIGHT_LEVEL";
  
-	key<AD08> { [   l,          L,		NoSymbol,	NoSymbol,	Home,		Home	]};
+	key<AD08> { [   l,          L,		ampersand,	NoSymbol,	Home,		Home	]};
     key<AD09> { [   u,          U,		NoSymbol,	NoSymbol,	Left,		Left	],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(), 
 			Redirect(key = <LEFT>, mods = Control, clearmods = LevelFive),
