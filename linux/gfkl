@@ -1,7 +1,7 @@
 partial alphanumeric_keys modifier_keys
 xkb_symbols "basic" {
 
-    name[Group1] = "Greatest Layout Workman";
+    name[Group1] = "Greatest Layout Wokmok";
     include "level3(ralt_switch)"
     include "level5(caps_switch)"
  
@@ -28,7 +28,7 @@ xkb_symbols "basic" {
     key<AE06> { [   NoSymbol,       NoSymbol    ]};
     key<AE07> { [   NoSymbol,       NoSymbol    ]};
     key<AE08> { [   NoSymbol,       NoSymbol    ]};
-    key<AE09> { [   plus,	        asciicircum,	plus,	asciicircum ]};
+    key<AE09> { [   plus,	        asciicircum,	plus,	asciicircum,    Menu,   Menu ]};
     key<AE10> { [   parenleft,      braceleft,	parenleft,  braceleft,	Down,	Down	],	
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <DOWN>, mods = Control, clearmods = LevelFive),
@@ -112,7 +112,10 @@ xkb_symbols "basic" {
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key=<VOL->, clearmods=all),	NoAction()]};
     key<AC06> { [   NoSymbol,   NoSymbol,   NoSymbol,   NoSymbol    ]};
-    key<AC07> { [   m,          M,          NoSymbol,   NoSymbol,	Menu,	Menu]};
+    key<AC07> { [   m,          M,          NoSymbol,   NoSymbol,	Insert,	Insert],
+		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+			Redirect(key = <INS>),
+			Redirect(key = <INS>)]};
     key<AC08> { [   n,          N,          7,          NoSymbol,	Down,		Down,	F7,	F7],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <FK07>, clearmods = all),
@@ -156,13 +159,10 @@ xkb_symbols "basic" {
 			Redirect(key = <AB04>, mods = Control, clearmods = LevelFive), 
 			Redirect(key = <AB04>, mods = Shift + Control, clearmods = LevelFive)]};
     key<AB05> { [   b,          B,		NoSymbol,	NoSymbol]};
-	key<AB06> { [   j,      J,  NoSymbol,	NoSymbol,		Caps_Lock,	Caps_Lock],
+	key<AB06> { [   j,      J,  slash,	question]};
+	key<AB07> { [   w,          W,			backslash,	NoSymbol,	Caps_Lock,	Caps_Lock],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 			LockMods(mods=Lock), LockMods(mods=Lock)]};
-	key<AB07> { [   w,          W,			backslash,	NoSymbol,	Insert,		Insert],
-		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
-			Redirect(key = <INS>),
-			Redirect(key = <INS>)]};
 	key<AB08> { [   l,          L,      	6,  NoSymbol,	Left,	Left,	F6,	F6],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <FK06>, clearmods = all),
@@ -235,7 +235,10 @@ xkb_symbols "qwerty" {
 			Redirect(key = <AC04>, mods = Shift + Control, clearmods = LevelFive),
 			Redirect(key = <FK04>, clearmods = all),
 			Redirect(key = <FK04>, clearmods = all)]};
-    key<AC07> { [   h,          H,          NoSymbol,   NoSymbol,	Menu,	Menu]};
+    key<AC07> { [   h,          H,          NoSymbol,   NoSymbol,	Insert,	Insert],
+		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+			Redirect(key = <INS>),
+			Redirect(key = <INS>)]};
     key<AC08> { [   j,          J,          7,          NoSymbol,	Down,		Down,	F7,	F7],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <FK07>, clearmods = all),
@@ -261,13 +264,10 @@ xkb_symbols "qwerty" {
 			Redirect(key = <AD02>, mods = Shift + Control, clearmods = LevelFive),
 			Redirect(key = <FK05>, clearmods = all),
 			Redirect(key = <FK05>, clearmods = all)]};
-	key<AB06> { [   NoSymbol,      NoSymbol,  NoSymbol,	NoSymbol,		Caps_Lock,	Caps_Lock],
+	key<AB06> { [   NoSymbol,      NoSymbol,  slash, question]};
+	key<AB07> { [   n,          N,			backslash,	NoSymbol,	Caps_Lock,		Caps_Lock],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 			LockMods(mods=Lock), LockMods(mods=Lock)]};
-	key<AB07> { [   n,          N,			backslash,	NoSymbol,	Insert,		Insert],
-		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
-			Redirect(key = <INS>),
-			Redirect(key = <INS>)]};
 	key<AB08> { [   m,          M,      	6,  NoSymbol,	Left,	Left,	F6,	F6],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <FK06>, clearmods = all),
