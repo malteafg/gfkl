@@ -11,6 +11,8 @@ xkb_symbols "basic" {
 
 
 
+    key<TLDE> { [Esc,   Esc],   actions[Group1] = [Redirect(key = <ESC>, clearmods = all),
+            Redirect(key = <ESC>, clearmods = all)]};
     key<AE01> { [   asciitilde,     exclam,		asciitilde,     exclam]};
     key<AE02> { [   bracketleft,    at,			bracketleft,    at      ,	NoSymbol,	NoSymbol  ],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
@@ -98,14 +100,14 @@ xkb_symbols "basic" {
 			Redirect(key = <FK02>, clearmods = all)]};
     key<AC03> { [   r,          R,          3,		NoSymbol,	f,	F,	F3,	F3],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
-            Redirect(key = <AD08>, mods = Control, clearmods = LevelFive),
-            Redirect(key = <AD08>, mods = Shift + Control, clearmods = LevelFive),
+            Redirect(key = <AC04>, mods = Control, clearmods = LevelFive),
+            Redirect(key = <AC04>, mods = Shift + Control, clearmods = LevelFive),
 			Redirect(key = <FK03>, clearmods = all),
 			Redirect(key = <FK03>, clearmods = all)]};
     key<AC04> { [   t,          T,          4,      NoSymbol,	t,	T,	F4,	F4],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(), 
-			Redirect(key = <AC04>, mods = Control, clearmods = LevelFive),
-			Redirect(key = <AC04>, mods = Shift + Control, clearmods = LevelFive),
+			Redirect(key = <AD08>, mods = Control, clearmods = LevelFive),
+			Redirect(key = <AD08>, mods = Shift + Control, clearmods = LevelFive),
 			Redirect(key = <FK04>, clearmods = all),
 			Redirect(key = <FK04>, clearmods = all)]};
     key<AC05> { [   g,          G,          NoSymbol,     NoSymbol,	XF86AudioLowerVolume, NoSymbol],
@@ -175,14 +177,30 @@ xkb_symbols "basic" {
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <DELE>, mods = Control, clearmods = LevelFive),
 			Redirect(key = <DELE>, mods = Control, clearmods = LevelFive)]};
-   
+};
+
+
+
+partial alphanumeric_keys modifier_keys
+xkb_symbols "wokmok_lshift" {
+    name[Group1] = "Greatest Layout LShift swap";
+    include "gfkl(basic)"
+    include "level3(ralt_switch)"
+    include "level5(caps_switch)"
+ 
+    key.type[Group1] = "EIGHT_LEVEL";
+ 
+  
 
     key<TLDE> { [   NoSymbol,         NoSymbol]};
     key<LFSH> { [   Tab,    Tab ],
         actions[Group1] = [NoAction(), Redirect(key = <LFSH>, mods = Shift)]};
     key<TAB>  { [   Shift_L,    Shift_L,    Shift_L,    Shift_L,    Shift_L,    Shift_L,
                     Shift_L,    Shift_L ]};
+    
 };
+
+
 
 
 partial alphanumeric_keys modifier_keys
@@ -225,8 +243,8 @@ xkb_symbols "qwerty" {
 
     key<AC03> { [   d,          D,          3,		NoSymbol,	f,	F,	F3,	F3],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
-            Redirect(key = <AD08>, mods = Control, clearmods = LevelFive),
-            Redirect(key = <AD08>, mods = Shift + Control, clearmods = LevelFive),
+            Redirect(key = <AD05>, mods = Control, clearmods = LevelFive),
+            Redirect(key = <AD05>, mods = Shift + Control, clearmods = LevelFive),
 			Redirect(key = <FK03>, clearmods = all),
 			Redirect(key = <FK03>, clearmods = all)]};
     key<AC04> { [   f,          F,          4,      NoSymbol,	t,	T,	F4,	F4],
@@ -260,8 +278,8 @@ xkb_symbols "qwerty" {
 
     key<AB03> { [   c,          C,      5,		NoSymbol,		XF86Copy,	XF86Copy,	F5,	F5	],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
-			Redirect(key = <AD02>, mods = Control, clearmods = LevelFive), 
-			Redirect(key = <AD02>, mods = Shift + Control, clearmods = LevelFive),
+			Redirect(key = <AB03>, mods = Control, clearmods = LevelFive), 
+			Redirect(key = <AB03>, mods = Shift + Control, clearmods = LevelFive),
 			Redirect(key = <FK05>, clearmods = all),
 			Redirect(key = <FK05>, clearmods = all)]};
 	key<AB06> { [   NoSymbol,      NoSymbol,  slash, question]};
@@ -272,14 +290,6 @@ xkb_symbols "qwerty" {
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <FK06>, clearmods = all),
 			Redirect(key = <FK06>, clearmods = all)]};
-
-
-
-    key<TLDE> { [   Escape,         Escape,		Escape,         Escape  ],
-		actions[Group1] = [Redirect(key = <ESC>), Redirect(key = <ESC>), Redirect(key = <ESC>), Redirect(key = <ESC>)]};
-    key<LFSH> { [   Shift_L,    Shift_L ]};
-    key<TAB>  { [   Tab,        Tab ]};
-
 
 
 
