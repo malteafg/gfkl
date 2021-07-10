@@ -54,17 +54,17 @@ xkb_symbols "basic" {
     key<AD02> { [   c,          C,		grave,		dead_grave,	XF86AudioPrev],
 			actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<I173>, clearmods=all)]};
-    key<AD03> { [   h,          H,		NoSymbol,	dead_acute,	XF86AudioNext],
+    key<AD03> { [   l,          L,		NoSymbol,	dead_acute,	XF86AudioNext],
 			actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<I171>, clearmods=all)]};
-    key<AD04> { [   p,          P,		NoSymbol,	dead_circumflex,	XF86AudioMute],
+    key<AD04> { [   m,          M,		NoSymbol,	dead_circumflex,	XF86AudioMute],
 			actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<MUTE>, clearmods=all)]};
     key<AD05> { [   k,          K,		NoSymbol,	dead_diaeresis,	XF86AudioRaiseVolume],
 			actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<VOL+>, clearmods=all)]};
     key<AD06> { [   NoSymbol,   NoSymbol    ]};
-    key<AD07> { [   NoSymbol,	NoSymbol]};
+    key<AD07> { [   z,	        Z]};
 	key<AD08> { [   f,          F,		NoSymbol,	NoSymbol,	Home,		Home	]};
     key<AD09> { [   u,          U,		ampersand,	NoSymbol,	Left,		Left	],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(), 
@@ -114,7 +114,7 @@ xkb_symbols "basic" {
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key=<VOL->, clearmods=all),	NoAction()]};
     key<AC06> { [   NoSymbol,   NoSymbol,   NoSymbol,   NoSymbol    ]};
-    key<AC07> { [   m,          M,          NoSymbol,   NoSymbol,	Insert,	Insert],
+    key<AC07> { [   p,          P,          NoSymbol,   NoSymbol,	Insert,	Insert],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <INS>),
 			Redirect(key = <INS>)]};
@@ -142,11 +142,11 @@ xkb_symbols "basic" {
 
 
 	key<LSGT> { [   slash,      question,	slash,	question	]};
-	key<AB01> { [   z,          Z,			U00E6,      U00C6,		Undo,		Redo        ],
+	key<AB01> { [   v,          V,			U00E6,      U00C6,		Undo,		Redo        ],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <AB01>, mods = Control, clearmods = LevelFive), 
 			Redirect(key = <AB01>, mods = Shift + Control, clearmods = LevelFive)]};
-    key<AB02> { [   x,          X,      U00F8,      U00D8,		XF86Cut,	XF86Cut     ],
+    key<AB02> { [   w,          W,      U00F8,      U00D8,		XF86Cut,	XF86Cut     ],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
       		Redirect(key = <AB02>, mods = Control, clearmods = LevelFive), 
 			Redirect(key = <AB02>, mods = Shift + Control, clearmods = LevelFive)]};
@@ -156,16 +156,16 @@ xkb_symbols "basic" {
 			Redirect(key = <AD02>, mods = Shift + Control, clearmods = LevelFive),
 			Redirect(key = <FK05>, clearmods = all),
 			Redirect(key = <FK05>, clearmods = all)]};
-    key<AB04> { [   v,          V,		U00E5,		U00C5,	XF86Paste,	XF86Paste  ],
+    key<AB04> { [   j,          J,		U00E5,		U00C5,	XF86Paste,	XF86Paste  ],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <AB04>, mods = Control, clearmods = LevelFive), 
 			Redirect(key = <AB04>, mods = Shift + Control, clearmods = LevelFive)]};
-    key<AB05> { [   b,          B,		NoSymbol,	NoSymbol]};
-	key<AB06> { [   j,      J,  slash,	question]};
-	key<AB07> { [   w,          W,			backslash,	NoSymbol,	Caps_Lock,	Caps_Lock],
+    key<AB05> { [   NoSymbol,   NoSymbol,	NoSymbol,	NoSymbol]};
+	key<AB06> { [   x,          X,  slash,	question]};
+	key<AB07> { [   b,          B,			backslash,	NoSymbol,	Caps_Lock,	Caps_Lock],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 			LockMods(mods=Lock), LockMods(mods=Lock)]};
-	key<AB08> { [   l,          L,      	6,  NoSymbol,	Left,	Left,	F6,	F6],
+	key<AB08> { [   h,          H,      	6,  NoSymbol,	Left,	Left,	F6,	F6],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <FK06>, clearmods = all),
 			Redirect(key = <FK06>, clearmods = all)]};
@@ -276,12 +276,25 @@ xkb_symbols "qwerty" {
 
 
 
+	key<AB01> { [   z,          Z,			U00E6,      U00C6,		Undo,		Redo        ],
+		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+			Redirect(key = <AB01>, mods = Control, clearmods = LevelFive), 
+			Redirect(key = <AB01>, mods = Shift + Control, clearmods = LevelFive)]};
+    key<AB02> { [   x,          X,      U00F8,      U00D8,		XF86Cut,	XF86Cut     ],
+		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+      		Redirect(key = <AB02>, mods = Control, clearmods = LevelFive), 
+			Redirect(key = <AB02>, mods = Shift + Control, clearmods = LevelFive)]};
     key<AB03> { [   c,          C,      5,		NoSymbol,		XF86Copy,	XF86Copy,	F5,	F5	],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <AB03>, mods = Control, clearmods = LevelFive), 
 			Redirect(key = <AB03>, mods = Shift + Control, clearmods = LevelFive),
 			Redirect(key = <FK05>, clearmods = all),
 			Redirect(key = <FK05>, clearmods = all)]};
+    key<AB04> { [   v,          V,		U00E5,		U00C5,	XF86Paste,	XF86Paste  ],
+		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+			Redirect(key = <AB04>, mods = Control, clearmods = LevelFive), 
+			Redirect(key = <AB04>, mods = Shift + Control, clearmods = LevelFive)]};
+    key<AB05> { [   b,          B,		NoSymbol,	NoSymbol]};
 	key<AB06> { [   NoSymbol,      NoSymbol,  slash, question]};
 	key<AB07> { [   n,          N,			backslash,	NoSymbol,	Caps_Lock,		Caps_Lock],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
@@ -290,6 +303,14 @@ xkb_symbols "qwerty" {
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <FK06>, clearmods = all),
 			Redirect(key = <FK06>, clearmods = all)]};
+	key<AB09> { [   comma,      less,       comma,		less,		BackSpace,	BackSpace	],
+		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+			Redirect(key = <BKSP>, mods = Control, clearmods = LevelFive),
+			Redirect(key = <BKSP>, mods = Control, clearmods = LevelFive)]};
+    key<AB10> { [   period,     greater,	period,		greater,	Delete,		Delete		],
+		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+			Redirect(key = <DELE>, mods = Control, clearmods = LevelFive),
+			Redirect(key = <DELE>, mods = Control, clearmods = LevelFive)]};
 
 
 
