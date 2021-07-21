@@ -144,12 +144,12 @@ xkb_symbols "basic" {
 	key<LSGT> { [   slash,      question,	slash,	question	]};
 	key<AB01> { [   v,          V,			U00E6,      U00C6,		Undo,		Redo        ],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
-			Redirect(key = <AB01>, mods = Control, clearmods = LevelFive), 
-			Redirect(key = <AB01>, mods = Shift + Control, clearmods = LevelFive)]};
+			Redirect(key = <AD07>, mods = Control, clearmods = LevelFive), 
+			Redirect(key = <AD07>, mods = Shift + Control, clearmods = LevelFive)]};
     key<AB02> { [   w,          W,      U00F8,      U00D8,		XF86Cut,	XF86Cut     ],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
-      		Redirect(key = <AB02>, mods = Control, clearmods = LevelFive), 
-			Redirect(key = <AB02>, mods = Shift + Control, clearmods = LevelFive)]};
+      		Redirect(key = <AB06>, mods = Control, clearmods = LevelFive), 
+			Redirect(key = <AB06>, mods = Shift + Control, clearmods = LevelFive)]};
     key<AB03> { [   d,          D,      5,		NoSymbol,		XF86Copy,	XF86Copy,	F5,	F5	],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <AD02>, mods = Control, clearmods = LevelFive), 
@@ -158,8 +158,8 @@ xkb_symbols "basic" {
 			Redirect(key = <FK05>, clearmods = all)]};
     key<AB04> { [   j,          J,		U00E5,		U00C5,	XF86Paste,	XF86Paste  ],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
-			Redirect(key = <AB04>, mods = Control, clearmods = LevelFive), 
-			Redirect(key = <AB04>, mods = Shift + Control, clearmods = LevelFive)]};
+			Redirect(key = <AB01>, mods = Control, clearmods = LevelFive), 
+			Redirect(key = <AB01>, mods = Shift + Control, clearmods = LevelFive)]};
     key<AB05> { [   NoSymbol,   NoSymbol,	NoSymbol,	NoSymbol]};
 	key<AB06> { [   x,          X,  slash,	question]};
 	key<AB07> { [   b,          B,			backslash,	NoSymbol,	Caps_Lock,	Caps_Lock],
