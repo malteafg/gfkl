@@ -213,6 +213,18 @@ xkb_symbols "qwerty" {
     key.type[Group1] = "EIGHT_LEVEL";
  
 
+    key<AE02> { [   bracketleft,    at,			bracketleft,    at      ,	NoSymbol,	NoSymbol  ],
+		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+			Redirect(key = <TAB>, mods = Control + Shift, clearmods = LevelFive),
+			Redirect(key = <TAB>, mods = Control + Shift, clearmods = LevelFive)]};
+    key<AE03> { [   bracketright,   numbersign,	bracketright, numbersign,	NoSymbol,	NoSymbol  ],
+		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+			Redirect(key = <TAB>, mods = Control, clearmods = LevelFive),
+			Redirect(key = <TAB>, mods = Control, clearmods = LevelFive)]};
+
+
+
+
 
     key<AD02> { [   w,          W,		grave,		dead_grave,	XF86AudioPrev],
 			actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),

@@ -9,3 +9,6 @@ Very nice keyboard layout
 
 ## Layer 5 (Caps Lock key)
 ![Layer 5](images/layer5.png)
+
+## i3 example
+![i3 example](images/i3.png)
