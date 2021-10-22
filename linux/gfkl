@@ -1,7 +1,7 @@
 partial alphanumeric_keys modifier_keys
 xkb_symbols "basic" {
 
-    name[Group1] = "Greatest Layout Wokmok";
+    name[Group1] = "wokmok";
     include "level3(ralt_switch)"
     include "level5(caps_switch)"
  
@@ -205,7 +205,7 @@ xkb_symbols "wokmok_lshift" {
 
 partial alphanumeric_keys modifier_keys
 xkb_symbols "qwerty" {
-    name[Group1] = "Greatest Layout";
+    name[Group1] = "qwerty";
     include "gfkl(basic)"
     include "level3(ralt_switch)"
     include "level5(caps_switch)"
