@@ -39,7 +39,7 @@ xkb_symbols "basic" {
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <UP>, mods = Control, clearmods = LevelFive),
 			Redirect(key = <UP>, mods = Control + Shift, clearmods = LevelFive)]};
-    key<AE12> { [   equal,      percent,	equal,	percent,  Page_Up,	Page_Up],
+    key<AE12> { [   minus,  underscore,	minus,	underscore,  Page_Up,	Page_Up],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <PGUP>, clearmods = all),
 			Redirect(key = <PGUP>, clearmods = all)]};
@@ -75,7 +75,7 @@ xkb_symbols "basic" {
 			Redirect(key = <RGHT>, mods = Control, clearmods = LevelFive),
 			Redirect(key = <RGHT>, mods = Control + Shift, clearmods = LevelFive)]};
     key<AD11> { [   semicolon,  colon,	semicolon,	colon,	End,		End		]};
-    key<AD12> { [   minus,          underscore,	minus,      underscore,	Page_Down,	Page_Down,	F12,F12],
+    key<AD12> { [   equal,      percent,	equal,  percent, Page_Down,	Page_Down,	F12,F12],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <PGDN>, clearmods = LevelFive),
 			Redirect(key = <PGDN>, clearmods = LevelFive),
