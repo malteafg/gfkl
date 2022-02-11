@@ -141,7 +141,10 @@ xkb_symbols "basic" {
 
 
 
-	key<LSGT> { [   slash,      question,	slash,	question	]};
+	key<LSGT> { [   slash,      question,	slash,	question,   slash,  slash	],
+		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+			Redirect(key = <LSGT>, mods = Control, clearmods = LevelFive), 
+			Redirect(key = <LSGT>, mods = Shift + Control, clearmods = LevelFive)]};
 	key<AB01> { [   v,          V,			U00E6,      U00C6,		Undo,		Redo        ],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
 			Redirect(key = <AD07>, mods = Control, clearmods = LevelFive), 
