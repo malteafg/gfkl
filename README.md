@@ -1,5 +1,5 @@
 # gfkl/wokmok
-gfkl/wokmok is a keyboard layout that I have created and use as my daily driver. It is intended to make it very comfortable to type both regular english and programming languages. Furthermore, it is the basis for which I attempt to find ways to do as much as possible on a computer without using the mouse. I currently do not own an ortholinear keyboard, but all design choices are made such that they also fit with ortholinear keyboards. 
+gfkl/wokmok is a keyboard layout that I have created and use as my daily driver. It is intended to make it very comfortable to type both regular english and programming languages. Furthermore, it is the basis for which I attempt to find ways to do as much as possible on a computer without using the mouse. The layout is built for a 60% keyboard layout (or smaller), and whilst typing I never have to move my hands away from their positions to do anything. I currently do not own an ortholinear keyboard, but all design choices are made such that they also fit with ortholinear keyboards. I created the images with [this website](http://www.keyboard-layout-editor.com/)
 
 ### Contents
 * [Current version](#current-version)
@@ -29,8 +29,17 @@ Many of the changes have been inspired by DreymaR's [Big Bag of Tricks](https://
 * What used to be the caps lock key now acts as a modifier for layer 5. If the button is just pressed it acts as esc.
 
 ## Layer 5
+This layer is very nice. It is also inspired by DreymaR's [Big Bag of Tricks](https://dreymar.colemak.org/). The '^' signalizes that the key is sent with the ctrl modifier enabled.
 
 ![Layer 5](images/layer5.png)
+
+* The green keys on the right hand are arrow keys that enables me to easily move around the cursor, both regularly and by word (particularly if using something that does not support vim keybinds).
+* The orange keys on the right hand allow me to delete stuff, both regularly and by word.
+* The yellow keys on the right hand are simply nice to have, even though I rarely use them.
+* The green keys on the left hand allow me to control the tabs of web browsers.
+* The yellow keys on the left hand are used for controlling audio.
+* The orange keys on the left hand are used for sending commonly used shortcuts that use the ctrl modifier. Thus, I rarely have to use the ctrl modifier, which is annoying to press, because I type with a straight wrist.
+* Lastly, when also holding down the altgr button, layer 7 is activated which simply contains f-keys at home row positions.
 
 ## Wokmok
 Wokmok refers to the placement of the letters in the layout. Thus, for a standard US keyboard layout, but with Wokmok, the layout would look something like this:
@@ -40,7 +49,7 @@ Wokmok refers to the placement of the letters in the layout. Thus, for a standar
 Wokmok has been through several iterations and for the latest iteration, it is essentially a modification of the magnificent [ISRT](https://notgate.github.io/layout/) keyboard layout. Wokmok was originally based on a combination of [Colemak](https://colemak.com/) and [Workman](https://workmanlayout.org/) (which is kinda how the name came to be). I had tried learning both of them but had a few minor issues with them. I combined the features that I liked from both layouts (that are still present in the current iteration), and tried different combinations of the lesser frequent keys. The asrtneio keys have always been in their current location. At last, I found the by far best configuration of letters I had tried for my personal taste, simply by swapping the 'i' and 'a' columns in the ISRT layout and by moving the punctuation characters back to their original positions, and that is the layout that I still use. 
 
 ## Analysis
-
+I tested the wokmok layout using the [DH analyzer](https://colemakmods.github.io/mod-dh/analyze.html) and the [stevepanalyzer](https://colemakmods.github.io/mod-dh/analyze.html). Wokmok generally scores slightly better than Colemak, and slightly worse than the ISRT layout. For more details, see the images inside the analyzer folder. For a detailed analysis of how the ISRT layout compares to various Colemak layouts see [this](https://notgate.github.io/layout/).
 
 ## Usage with window manager
 I currently use [bspwm](https://github.com/baskerville/bspwm), and control it with the following keybinds:
