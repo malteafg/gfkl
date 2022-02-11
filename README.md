@@ -8,7 +8,7 @@ gfkl/wokmok is a keyboard layout that I have created and use as my daily driver.
 * [Wokmok](#wokmok)
 * [Analysis of Wokmok](#analysis)
 * [Usage with window manager](#usage-with-window-manager)
-* [Installation (not very helpfull)](#installation)
+* [Installation (not very helpful)](#installation)
 
 ## Current version
 The color of a button indicates which finger I use to press that button. Black keys are keys that I do not like to press and they have therefore been disabled.
@@ -49,3 +49,18 @@ I currently use [bspwm](https://github.com/baskerville/bspwm), and control it wi
 
 
 ## Installation
+I recommend that you just use this repo for inspiration and then you can play around with what works for you on your own.
+### Linux
+#### xorg
+Clone the repo and run the install script inside the linux folder. It simply creates a symlink to linux/gfkl from /usr/share/X11/xkb/symbols/gfkl. Upon starting X, I run the following two commands from init.rc:
+```
+setxkbmap -layout gfkl -variant wokmok_lshift -model pc105 -option altwin:swap_lalt_lwin &
+xcape -e '#66=Escape;#23=Tab' -t 180 &
+```
+I use [xcape](https://github.com/alols/xcape) for having the dual functionality on the escape and tab keys.
+
+#### Wayland
+I have no idea how keyboard layouts work on Wayland.
+
+### Windows
+The windows implementation of gfkl/wokmok is terribly outdated. It can probably be installed with the microsoft keyboard layout creator tool. I used autohotkey on windows, to mimic the behavior of layer 5.
