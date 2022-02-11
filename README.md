@@ -61,7 +61,7 @@ I currently use [bspwm](https://github.com/baskerville/bspwm), and control it wi
 I recommend that you just use this repo for inspiration and then you can play around with what works for you on your own.
 ### Linux
 #### xorg
-Clone the repo and run the install script inside the linux folder. It simply creates a symlink to linux/gfkl from /usr/share/X11/xkb/symbols/gfkl. Upon starting X, I run the following two commands from init.rc:
+Clone the repo and run the install script inside the linux folder. It simply creates a symlink to linux/gfkl from /usr/share/X11/xkb/symbols/gfkl. You can also just grab the gfkl from the repo, place it anywhere you'd like and then symlink from /usr/share/X11/xkb/symbols/gfkl, such that you don't have to clone the repo. Upon starting X, I run the following two commands from init.rc:
 ```
 setxkbmap -layout gfkl -variant wokmok_lshift -model pc105 -option altwin:swap_lalt_lwin &
 xcape -e '#66=Escape;#23=Tab' -t 180 &
