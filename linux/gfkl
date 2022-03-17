@@ -14,7 +14,7 @@ xkb_symbols "basic" {
         Redirect(key = <LFSH>, mods = Control + Shift, clearmods = LevelFive),
         Redirect(key = <LFSH>, mods = Control + Shift, clearmods = LevelFive)]};
 
-    key<AE02> {[NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol],
+    key<AE03> {[NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol],
 		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
         Redirect(key = <LFSH>, mods = Control, clearmods = LevelFive),
         Redirect(key = <LFSH>, mods = Control, clearmods = LevelFive)]};
