@@ -26,19 +26,19 @@ xkb_symbols "basic" {
 
 
 // UPPER ROW ===================================================================
-    key<AD01> {[q, Q, asciitilde, grave, XF86AudioPlay],
+    key<AD01> {[q, Q, asciitilde, NoSymbol, XF86AudioPlay],
 			    actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<I208>, clearmods=all)]};
 
-    key<AD02> {[c, C, bracketleft, less, XF86AudioPrev],
+    key<AD02> {[c, C, braceleft, less, XF86AudioPrev],
 			    actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<I173>, clearmods=all)]};
 
-    key<AD03> {[l, L, bracketright, greater, XF86AudioNext],
+    key<AD03> {[l, L, braceright, greater, XF86AudioNext],
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<I171>, clearmods=all)]};
 
-    key<AD04> {[m, M, asterisk, NoSymbol, XF86AudioMute],
+    key<AD04> {[m, M, asterisk, asciicircum, XF86AudioMute],
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<MUTE>, clearmods=all)]};
 
@@ -53,14 +53,14 @@ xkb_symbols "basic" {
                 Redirect(key = <PGUP>, clearmods = all),
                 Redirect(key = <PGUP>, clearmods = all)]};
 
-	key<AD08> {[f, F, plus, asciicircum, Home, Home]};
+	key<AD08> {[f, F, plus, NoSymbol, Home, Home]};
 
-    key<AD09> {[u, U, parenleft, braceleft,	Left, Left],
+    key<AD09> {[u, U, parenleft, bracketleft, Left, Left],
         actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(), 
         Redirect(key = <LEFT>, mods = Control, clearmods = LevelFive),
         Redirect(key = <LEFT>, mods = Control + Shift, clearmods = LevelFive)]};
 
-    key<AD10> {[y, Y, parenright, braceright, Right, Right],
+    key<AD10> {[y, Y, parenright, bracketright, Right, Right],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(), 
         Redirect(key = <RGHT>, mods = Control, clearmods = LevelFive),
         Redirect(key = <RGHT>, mods = Control + Shift, clearmods = LevelFive)]};
@@ -133,7 +133,7 @@ xkb_symbols "basic" {
                 Redirect(key = <FK09>, clearmods = all),
                 Redirect(key = <FK09>, clearmods = all)]};
 
-    key<AC11> {[o, O, 0, NoSymbol, BackSpace, BackSpace, F10, F10],
+    key<AC11> {[o, O, 0, grave, BackSpace, BackSpace, F10, F10],
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
                     NoAction(), NoAction(),
                 Redirect(key = <FK10>, clearmods = all),
