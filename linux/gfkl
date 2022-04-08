@@ -30,11 +30,11 @@ xkb_symbols "basic" {
 			    actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<I208>, clearmods=all)]};
 
-    key<AD02> {[c, C, braceleft, less, XF86AudioPrev],
+    key<AD02> {[c, C, braceleft, NoSymbol, XF86AudioPrev],
 			    actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<I173>, clearmods=all)]};
 
-    key<AD03> {[l, L, braceright, greater, XF86AudioNext],
+    key<AD03> {[l, L, braceright, NoSymbol, XF86AudioNext],
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<I171>, clearmods=all)]};
 
@@ -42,7 +42,7 @@ xkb_symbols "basic" {
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<MUTE>, clearmods=all)]};
 
-    key<AD05> {[k, K, NoSymbol, NoSymbol, XF86AudioRaiseVolume],
+    key<AD05> {[k, K, U00E6, U00C6, XF86AudioRaiseVolume],
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<VOL+>, clearmods=all)]};
 
@@ -104,7 +104,7 @@ xkb_symbols "basic" {
         Redirect(key = <FK04>, clearmods = all),
         Redirect(key = <FK04>, clearmods = all)]};
 
-    key<AC05> {[g, G, NoSymbol, NoSymbol, XF86AudioLowerVolume],
+    key<AC05> {[g, G, U00F8, U00D8, XF86AudioLowerVolume],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
         Redirect(key=<VOL->, clearmods=all)]};
 
@@ -115,7 +115,7 @@ xkb_symbols "basic" {
                 Redirect(key = <PGDN>, clearmods = all),
                 Redirect(key = <PGDN>, clearmods = all)]};
 
-    key<AC08> {[n, N, 7, backslash, Down, Down, F7, F7],
+    key<AC08> {[n, N, 7, NoSymbol, Down, Down, F7, F7],
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
                     NoAction(), NoAction(),
                 Redirect(key = <FK07>, clearmods = all),
@@ -153,12 +153,12 @@ xkb_symbols "basic" {
         Redirect(key = <LSGT>, mods = Control, clearmods = LevelFive), 
         Redirect(key = <LSGT>, mods = Shift + Control, clearmods = LevelFive)]};
 
-	key<AB01> {[v, V, U00E6, U00C6, Undo, Redo],
+	key<AB01> {[v, V, less, NoSymbol, Undo, Redo],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
         Redirect(key = <AD07>, mods = Control, clearmods = LevelFive), 
         Redirect(key = <AD07>, mods = Shift + Control, clearmods = LevelFive)]};
 
-    key<AB02> {[w, W, U00F8, U00D8, XF86Cut, XF86Cut],
+    key<AB02> {[w, W, greater, NoSymbol, XF86Cut, XF86Cut],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
         Redirect(key = <AB06>, mods = Control, clearmods = LevelFive), 
         Redirect(key = <AB06>, mods = Shift + Control, clearmods = LevelFive)]};
@@ -178,7 +178,7 @@ xkb_symbols "basic" {
     key<AB05> {[NoSymbol, NoSymbol, NoSymbol, NoSymbol]};
 	key<AB06> {[x, X, NoSymbol, NoSymbol]};
 
-	key<AB07> {[b, B, NoSymbol, NoSymbol, Caps_Lock, Caps_Lock],
+	key<AB07> {[b, B, backslash, NoSymbol, Caps_Lock, Caps_Lock],
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
                 LockMods(mods=Lock), LockMods(mods=Lock)]};
 
