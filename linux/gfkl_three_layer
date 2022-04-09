@@ -78,35 +78,29 @@ xkb_symbols "basic" {
 // MIDDLE ROW ==================================================================
     key<AC01> {[a, A, 1, exclam, a, A, F1, F1],
         actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(), 
-        NoAction(), NoAction(),
-        //Redirect(key = <AC01>, mods = Control, clearmods = LevelFive),
-        //Redirect(key = <AC01>, mods = Shift + Control, clearmods = LevelFive),
+        Redirect(key = <AC01>, mods = Control, clearmods = LevelFive),
+        Redirect(key = <AC01>, mods = Shift + Control, clearmods = LevelFive),
         Redirect(key = <FK01>, clearmods = all),
         Redirect(key = <FK01>, clearmods = all)]};
 
-    key<AC02> {[s, S, 2, at, NoSymbol, NoSymbol, F2, F2],
+    key<AC02> {[s, S, 2, at, s, S, F2, F2],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(), 
-        Redirect(key = <LCTL>, mods = Control + Shift, clearmods = LevelFive),
-        Redirect(key = <LCTL>, mods = Control + Shift, clearmods = LevelFive),
-        //Redirect(key = <AC02>, mods = Control, clearmods = LevelFive),
-        //Redirect(key = <AC02>, mods = Shift + Control, clearmods = LevelFive),
+        Redirect(key = <AC02>, mods = Control, clearmods = LevelFive),
+        Redirect(key = <AC02>, mods = Shift + Control, clearmods = LevelFive),
         Redirect(key = <FK02>, clearmods = all),
         Redirect(key = <FK02>, clearmods = all)]};
 
-    key<AC03> {[r, R, 3, numbersign, NoSymbol, NoSymbol, F3, F3],
+    key<AC03> {[r, R, 3, numbersign, f, F, F3, F3],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
-        Redirect(key = <LCTL>, mods = Control, clearmods = LevelFive),
-        Redirect(key = <LCTL>, mods = Control, clearmods = LevelFive),
-        //Redirect(key = <AC04>, mods = Control, clearmods = LevelFive),
-        //Redirect(key = <AC04>, mods = Shift + Control, clearmods = LevelFive),
+        Redirect(key = <AC04>, mods = Control, clearmods = LevelFive),
+        Redirect(key = <AC04>, mods = Shift + Control, clearmods = LevelFive),
         Redirect(key = <FK03>, clearmods = all),
         Redirect(key = <FK03>, clearmods = all)]};
 
     key<AC04> {[t, T, 4, dollar, t, T, F4, F4],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(), 
-        NoAction(), NoAction(),
-        //Redirect(key = <AD08>, mods = Control, clearmods = LevelFive),
-        //Redirect(key = <AD08>, mods = Shift + Control, clearmods = LevelFive),
+        Redirect(key = <AD08>, mods = Control, clearmods = LevelFive),
+        Redirect(key = <AD08>, mods = Shift + Control, clearmods = LevelFive),
         Redirect(key = <FK04>, clearmods = all),
         Redirect(key = <FK04>, clearmods = all)]};
 
@@ -156,39 +150,30 @@ xkb_symbols "basic" {
 // LOWER ROW ===================================================================
 	key<LSGT> {[slash, question, slash, question, slash, slash],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
-        NoAction(), NoAction()
-        //Redirect(key = <LSGT>, mods = Control, clearmods = LevelFive), 
-        //Redirect(key = <LSGT>, mods = Shift + Control, clearmods = LevelFive)
-        ]};
+        Redirect(key = <LSGT>, mods = Control, clearmods = LevelFive), 
+        Redirect(key = <LSGT>, mods = Shift + Control, clearmods = LevelFive)]};
 
 	key<AB01> {[v, V, less, NoSymbol, Undo, Redo],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
-        NoAction(), NoAction()
-        //Redirect(key = <AD07>, mods = Control, clearmods = LevelFive), 
-        //Redirect(key = <AD07>, mods = Shift + Control, clearmods = LevelFive)
-        ]};
+        Redirect(key = <AD07>, mods = Control, clearmods = LevelFive), 
+        Redirect(key = <AD07>, mods = Shift + Control, clearmods = LevelFive)]};
 
     key<AB02> {[w, W, greater, NoSymbol, XF86Cut, XF86Cut],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
-        NoAction(), NoAction()
-        //Redirect(key = <AB06>, mods = Control, clearmods = LevelFive), 
-        //Redirect(key = <AB06>, mods = Shift + Control, clearmods = LevelFive)
-        ]};
+        Redirect(key = <AB06>, mods = Control, clearmods = LevelFive), 
+        Redirect(key = <AB06>, mods = Shift + Control, clearmods = LevelFive)]};
 
     key<AB03> {[d, D, 5, NoSymbol, XF86Copy, XF86Copy, F5, F5],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
-        NoAction(), NoAction(),
-        //Redirect(key = <AD02>, mods = Control, clearmods = LevelFive), 
-        //Redirect(key = <AD02>, mods = Shift + Control, clearmods = LevelFive),
+        Redirect(key = <AD02>, mods = Control, clearmods = LevelFive), 
+        Redirect(key = <AD02>, mods = Shift + Control, clearmods = LevelFive),
         Redirect(key = <FK05>, clearmods = all),
         Redirect(key = <FK05>, clearmods = all)]};
 
     key<AB04> {[j, J, U00E5, U00C5, XF86Paste, XF86Paste],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
-        NoAction(), NoAction()
-        //Redirect(key = <AB01>, mods = Control, clearmods = LevelFive), 
-        //Redirect(key = <AB01>, mods = Shift + Control, clearmods = LevelFive)
-        ]};
+        Redirect(key = <AB01>, mods = Control, clearmods = LevelFive), 
+        Redirect(key = <AB01>, mods = Shift + Control, clearmods = LevelFive)]};
 
     key<AB05> {[NoSymbol, NoSymbol, NoSymbol, NoSymbol]};
 	key<AB06> {[x, X, NoSymbol, NoSymbol]};
@@ -216,15 +201,11 @@ xkb_symbols "basic" {
 // FIX L_SHIFT =================================================================
     key<TLDE> {[NoSymbol, NoSymbol]};
 
+    key<LFSH> {[Tab, Tab], actions[Group1] = [NoAction(), 
+                Redirect(key = <LFSH>, mods = Shift)]};
+
     key<TAB>  {[Shift_L, Shift_L, Shift_L, Shift_L,
                 Shift_L, Shift_L, Shift_L, Shift_L]};
-
-    key<LFSH> {[Control_L, Control_L, Control_L, Control_L,
-                Control_L, Control_L, Control_L, Control_L]};
-
-    key<LCTL> {[Tab, Tab], actions[Group1] = [NoAction(), 
-                Redirect(key = <LCTL>, mods = Shift)]};
-
 
 // DISABLE UPPER ROW ===========================================================
     key<AE01> {[NoSymbol, NoSymbol]};
