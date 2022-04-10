@@ -8,23 +8,6 @@ xkb_symbols "basic" {
     key.type[Group1] = "EIGHT_LEVEL";
 
 
-// TAB MANIPULATION ============================================================
-    key<AE02> {[NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol],
-		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
-        Redirect(key = <LFSH>, mods = Control + Shift, clearmods = LevelFive),
-        Redirect(key = <LFSH>, mods = Control + Shift, clearmods = LevelFive)]};
-
-    key<AE03> {[NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol],
-		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
-        Redirect(key = <LFSH>, mods = Control, clearmods = LevelFive),
-        Redirect(key = <LFSH>, mods = Control, clearmods = LevelFive)]};
-
-    key<AE04> {[NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol],
-		actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
-        Redirect(key = <AB02>, mods = Control, clearmods = LevelFive),
-        Redirect(key = <AB02>, mods = Control, clearmods = LevelFive)]};
-
-
 // UPPER ROW ===================================================================
     key<AD01> {[q, Q, asciitilde, NoSymbol, XF86AudioPlay],
 			    actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
@@ -104,9 +87,9 @@ xkb_symbols "basic" {
 
     key<AC04> {[t, T, 4, dollar, t, T, F4, F4],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(), 
-        NoAction(), NoAction(),
-        //Redirect(key = <AD08>, mods = Control, clearmods = LevelFive),
-        //Redirect(key = <AD08>, mods = Shift + Control, clearmods = LevelFive),
+        //NoAction(), NoAction(),
+        Redirect(key = <AB02>, mods = Control, clearmods = LevelFive),
+        Redirect(key = <AB02>, mods = Shift + Control, clearmods = LevelFive),
         Redirect(key = <FK04>, clearmods = all),
         Redirect(key = <FK04>, clearmods = all)]};
 
@@ -163,31 +146,31 @@ xkb_symbols "basic" {
 
 	key<AB01> {[v, V, less, NoSymbol, Undo, Redo],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
-        NoAction(), NoAction()
-        //Redirect(key = <AD07>, mods = Control, clearmods = LevelFive), 
-        //Redirect(key = <AD07>, mods = Shift + Control, clearmods = LevelFive)
+        //NoAction(), NoAction()
+        Redirect(key = <AD07>, mods = Control, clearmods = LevelFive), 
+        Redirect(key = <AD07>, mods = Shift + Control, clearmods = LevelFive)
         ]};
 
     key<AB02> {[w, W, greater, NoSymbol, XF86Cut, XF86Cut],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
-        NoAction(), NoAction()
-        //Redirect(key = <AB06>, mods = Control, clearmods = LevelFive), 
-        //Redirect(key = <AB06>, mods = Shift + Control, clearmods = LevelFive)
+        //NoAction(), NoAction()
+        Redirect(key = <AB06>, mods = Control, clearmods = LevelFive), 
+        Redirect(key = <AB06>, mods = Shift + Control, clearmods = LevelFive)
         ]};
 
     key<AB03> {[d, D, 5, NoSymbol, XF86Copy, XF86Copy, F5, F5],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
-        NoAction(), NoAction(),
-        //Redirect(key = <AD02>, mods = Control, clearmods = LevelFive), 
-        //Redirect(key = <AD02>, mods = Shift + Control, clearmods = LevelFive),
+        //NoAction(), NoAction(),
+        Redirect(key = <AD02>, mods = Control, clearmods = LevelFive), 
+        Redirect(key = <AD02>, mods = Shift + Control, clearmods = LevelFive),
         Redirect(key = <FK05>, clearmods = all),
         Redirect(key = <FK05>, clearmods = all)]};
 
     key<AB04> {[j, J, U00E5, U00C5, XF86Paste, XF86Paste],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
-        NoAction(), NoAction()
-        //Redirect(key = <AB01>, mods = Control, clearmods = LevelFive), 
-        //Redirect(key = <AB01>, mods = Shift + Control, clearmods = LevelFive)
+        //NoAction(), NoAction()
+        Redirect(key = <AB01>, mods = Control, clearmods = LevelFive), 
+        Redirect(key = <AB01>, mods = Shift + Control, clearmods = LevelFive)
         ]};
 
     key<AB05> {[NoSymbol, NoSymbol, NoSymbol, NoSymbol]};
@@ -213,17 +196,23 @@ xkb_symbols "basic" {
                 Redirect(key = <DELE>, mods = Control, clearmods = LevelFive),
                 Redirect(key = <DELE>, mods = Control, clearmods = LevelFive)]};
 
-// FIX L_SHIFT =================================================================
+// FIX MODIFIERS =================================================================
     key<TLDE> {[NoSymbol, NoSymbol]};
 
     key<TAB>  {[Shift_L, Shift_L, Shift_L, Shift_L,
                 Shift_L, Shift_L, Shift_L, Shift_L]};
 
-    key<LFSH> {[Control_L, Control_L, Control_L, Control_L,
-                Control_L, Control_L, Control_L, Control_L]};
+    key<LFSH> {[Alt_L, Alt_L, Alt_L, Alt_L,
+                Alt_L, Alt_L, Alt_L, Alt_L]};
 
     key<LCTL> {[Tab, Tab], actions[Group1] = [NoAction(), 
                 Redirect(key = <LCTL>, mods = Shift)]};
+
+    key<LWIN> {[Control_L, Control_L, Control_L, Control_L,
+                Control_L, Control_L, Control_L, Control_L]};
+    
+    key<LALT> {[Super_L, Super_L, Super_L, Super_L,
+                Super_L, Super_L, Super_L, Super_L]};
 
 
 // DISABLE UPPER ROW ===========================================================
