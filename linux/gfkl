@@ -214,6 +214,8 @@ xkb_symbols "basic" {
     key<LALT> {[Super_L, Super_L, Super_L, Super_L,
                 Super_L, Super_L, Super_L, Super_L]};
 
+    key<BKSP> {[NoSymbol, NoSymbol]};
+
     key<RCTL> {[Return, Return]};
     
     key<RTRN>  {[Control_R, Control_R, Control_R, Control_R,
