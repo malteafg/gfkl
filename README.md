@@ -8,7 +8,6 @@ gfkl/wokmok is a keyboard layout that I have created and use as my daily driver.
 * [Wokmok](#wokmok)
 * [Analysis of Wokmok](#analysis)
 * [Usage with window manager](#usage-with-window-manager)
-* [Installation (not very helpful)](#installation)
 
 ## Current version
 The color of a button indicates which finger I use to press that button. Black keys are keys that I do not like to press and they have therefore been disabled.
@@ -16,11 +15,7 @@ The color of a button indicates which finger I use to press that button. Black k
 ![Wokmok](images/wokmok.png)
 
 ## gfkl
-gfkl refers to any change I have done compared to the original US keyboard layout that is not concerned with the letters. For the layout of the letters see [Wokmok](#wokmok). Applying gfkl to US keyboard layout yields the following layout.
-
-![Qwerty](images/qwerty.png)
-
-Many of the changes have been inspired by DreymaR's [Big Bag of Tricks](https://dreymar.colemak.org/). The following changes from a regular keyboard layout have been made.
+gfkl refers to any change I have done compared to the original US keyboard layout that is not concerned with the letters. For the layout of the letters see [Wokmok](#wokmok). Many of the changes have been inspired by DreymaR's [Big Bag of Tricks](https://dreymar.colemak.org/). The following changes from a regular keyboard layout have been made.
 * Any key that the right hand presses have been moved once to the right. Therefore, the distance from the edge of the keyboard to the right hand is equal to the distance from the edge of the keyboard to the left hand. This makes it way more comfortable to press enter, backspace and rshift. It also makes it easier to utilize the altgr button.
 * The numbers have been moved to the home row, such that they are easy to press. They are activated using the altgr button (layer 3). The slight annoyance by having to press altgr before typing numbers, is by far outweighed by the fact that the numbers are now at home row.
 * All characters (except for a few) other than letters and numbers are positioned such that they are independent of whether layer 3 is currently activated. This makes the annoyance of having to use altgr even smaller.
@@ -42,11 +37,7 @@ This layer is very nice. It is also inspired by DreymaR's [Big Bag of Tricks](ht
 * Lastly, when also holding down the altgr button, layer 7 is activated which simply contains f-keys at home row positions.
 
 ## Wokmok
-Wokmok refers to the placement of the letters in the layout. Thus, for a standard US keyboard layout, but with Wokmok, the layout would look something like this:
-
-![USWokmok](images/uswokmok.png)
-
-Wokmok has been through several iterations and for the latest iteration, it is essentially a modification of the magnificent [ISRT](https://notgate.github.io/layout/) keyboard layout. Wokmok was originally based on a combination of [Colemak](https://colemak.com/) and [Workman](https://workmanlayout.org/) (which is kinda how the name came to be). I had tried learning both of them but had a few minor issues with them. I combined the features that I liked from both layouts (that are still present in the current iteration), and tried different combinations of the lesser frequent keys. The asrtneio keys have always been in their current location. At last, I found the by far best configuration of letters I had tried for my personal taste, simply by swapping the 'i' and 'a' columns in the ISRT layout and by moving the punctuation characters back to their original positions, and that is the layout that I still use. 
+Wokmok refers to the placement of the letters in the layout. Wokmok has been through several iterations and for the latest iteration, it is essentially a modification of the magnificent [ISRT](https://notgate.github.io/layout/) keyboard layout. Wokmok was originally based on a combination of [Colemak](https://colemak.com/) and [Workman](https://workmanlayout.org/) (which is kinda how the name came to be). I had tried learning both of them but had a few minor issues with them. I combined the features that I liked from both layouts (that are still present in the current iteration), and tried different combinations of the lesser frequent keys. The asrtneio keys have always been in their current location. At last, I found the by far best configuration of letters I had tried for my personal taste, simply by swapping the 'i' and 'a' columns in the ISRT layout and by moving the punctuation characters back to their original positions.
 
 ## Analysis
 I tested the wokmok layout using the [DH analyzer](https://colemakmods.github.io/mod-dh/analyze.html) and the [stevepanalyzer](https://colemakmods.github.io/mod-dh/analyze.html). Wokmok generally scores slightly better than Colemak, and slightly worse than the ISRT layout. For more details, see the images inside the analyzer folder. For a detailed analysis of how the ISRT layout compares to various Colemak layouts see [this](https://notgate.github.io/layout/).
@@ -55,21 +46,3 @@ I tested the wokmok layout using the [DH analyzer](https://colemakmods.github.io
 I currently use [bspwm](https://github.com/baskerville/bspwm), and control it with the following keybinds:
 
 ![bspwm example](images/bspwm.png)
-
-
-## Installation
-I recommend that you just use this repo for inspiration and then you can play around with what works for you on your own.
-### Linux
-#### xorg
-Clone the repo and run the install script inside the linux folder. It simply creates a symlink to linux/gfkl from /usr/share/X11/xkb/symbols/gfkl. You can also just grab the gfkl from the repo, place it anywhere you'd like and then symlink from /usr/share/X11/xkb/symbols/gfkl, such that you don't have to clone the repo. Upon starting X, I run the following two commands from init.rc:
-```
-setxkbmap -layout gfkl -variant wokmok_lshift -model pc105 -option altwin:swap_lalt_lwin &
-xcape -e '#66=Escape;#23=Tab' -t 180 &
-```
-I use [xcape](https://github.com/alols/xcape) for having the dual functionality on the escape and tab keys.
-
-#### Wayland
-I have no idea how keyboard layouts work on Wayland.
-
-### Windows
-The windows implementation of gfkl/wokmok is terribly outdated. It can probably be installed with the microsoft keyboard layout creator tool. I used autohotkey on windows, to mimic the behavior of layer 5.
