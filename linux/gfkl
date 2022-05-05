@@ -13,11 +13,11 @@ xkb_symbols "basic" {
 			    actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<I208>, clearmods=all)]};
 
-    key<AD02> {[c, C, braceleft, NoSymbol, XF86AudioPrev],
+    key<AD02> {[c, C, braceleft, bracketleft, XF86AudioPrev],
 			    actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<I173>, clearmods=all)]};
 
-    key<AD03> {[l, L, braceright, NoSymbol, XF86AudioNext],
+    key<AD03> {[l, L, braceright, bracketright, XF86AudioNext],
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<I171>, clearmods=all)]};
 
@@ -38,14 +38,14 @@ xkb_symbols "basic" {
 
 	key<AD08> {[f, F, plus, NoSymbol, Home, Home]};
 
-    key<AD09> {[u, U, parenleft, bracketleft, Left, Left, F10, F10],
+    key<AD09> {[u, U, parenleft, NoSymbol, Left, Left, F10, F10],
         actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(), 
         Redirect(key = <LEFT>, mods = Control, clearmods = LevelFive),
         Redirect(key = <LEFT>, mods = Control + Shift, clearmods = LevelFive),
         Redirect(key = <FK10>, clearmods = all),
         Redirect(key = <FK10>, clearmods = all)]};
 
-    key<AD10> {[y, Y, parenright, bracketright, Right, Right, F11, F11],
+    key<AD10> {[y, Y, parenright, NoSymbol, Right, Right, F11, F11],
 		actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(), 
         Redirect(key = <RGHT>, mods = Control, clearmods = LevelFive),
         Redirect(key = <RGHT>, mods = Control + Shift, clearmods = LevelFive),
