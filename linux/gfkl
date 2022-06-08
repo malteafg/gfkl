@@ -9,19 +9,19 @@ xkb_symbols "basic" {
 
 
 // UPPER ROW ===================================================================
-    key<AD01> {[q, Q, asciitilde, NoSymbol, XF86AudioPlay],
+    key<AD01> {[q, Q, bracketleft, NoSymbol, XF86AudioPlay],
 			    actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<I208>, clearmods=all)]};
 
-    key<AD02> {[c, C, braceleft, bracketleft, XF86AudioPrev],
+    key<AD02> {[c, C, braceleft, NoSymbol, XF86AudioPrev],
 			    actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<I173>, clearmods=all)]};
 
-    key<AD03> {[l, L, braceright, bracketright, XF86AudioNext],
+    key<AD03> {[l, L, braceright, NoSymbol, XF86AudioNext],
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<I171>, clearmods=all)]};
 
-    key<AD04> {[m, M, asterisk, asciicircum, XF86AudioMute],
+    key<AD04> {[m, M, bracketright, NoSymbol, XF86AudioMute],
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
 				Redirect(key=<MUTE>, clearmods=all)]};
 
@@ -103,7 +103,7 @@ xkb_symbols "basic" {
 
     key<AC06> {[NoSymbol, NoSymbol]};
 
-    key<AC07> {[p, P, NoSymbol, NoSymbol, Page_Down, Page_Down],
+    key<AC07> {[p, P, asterisk, asciicircum, Page_Down, Page_Down],
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
                 Redirect(key = <PGDN>, clearmods = all),
                 Redirect(key = <PGDN>, clearmods = all)]};
@@ -171,7 +171,7 @@ xkb_symbols "basic" {
     key<AB05> {[NoSymbol, NoSymbol, NoSymbol, NoSymbol]};
 	key<AB06> {[x, X, NoSymbol, NoSymbol]};
 
-	key<AB07> {[b, B, NoSymbol, NoSymbol, Caps_Lock, Caps_Lock],
+	key<AB07> {[b, B, asciitilde, NoSymbol, Caps_Lock, Caps_Lock],
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
                 LockMods(mods=Lock), LockMods(mods=Lock)]};
 
