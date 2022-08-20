@@ -221,18 +221,19 @@ xkb_symbols "basic" {
     key<RTRN>  {[Control_R, Control_R, Control_R, Control_R,
                 Control_R, Control_R, Control_R, Control_R]};
 
+// NUMBERS FOR GAMING
+    key<AE01> {[1, NoSymbol]};
+    key<AE02> {[2, NoSymbol]};
+    key<AE03> {[3, NoSymbol]};
+    key<AE04> {[4, NoSymbol]};
+    key<AE05> {[5, NoSymbol]};
+    key<AE06> {[6, NoSymbol]};
+    key<AE07> {[7, NoSymbol]};
+    key<AE08> {[8, NoSymbol]};
+    key<AE09> {[9, NoSymbol]};
+    key<AE10> {[0, NoSymbol]};
 
 // DISABLE UPPER ROW ===========================================================
-    key<AE01> {[NoSymbol, NoSymbol]};
-    key<AE02> {[NoSymbol, NoSymbol]};
-    key<AE03> {[NoSymbol, NoSymbol]};
-    key<AE04> {[NoSymbol, NoSymbol]};
-    key<AE05> {[NoSymbol, NoSymbol]};
-    key<AE06> {[NoSymbol, NoSymbol]};
-    key<AE07> {[NoSymbol, NoSymbol]};
-    key<AE08> {[NoSymbol, NoSymbol]};
-    key<AE09> {[NoSymbol, NoSymbol]};
-    key<AE10> {[NoSymbol, NoSymbol]};
     key<AE11> {[NoSymbol, NoSymbol]};
     key<AE12> {[NoSymbol, NoSymbol]};
     key<BKSP> {[NoSymbol, NoSymbol]};
