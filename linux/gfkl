@@ -103,7 +103,7 @@ xkb_symbols "basic" {
 
     key<AC06> {[NoSymbol, NoSymbol]};
 
-    key<AC07> {[p, P, asterisk, asciicircum, Page_Down, Page_Down],
+    key<AC07> {[p, P, asterisk, NoSymbol, Page_Down, Page_Down],
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
                 Redirect(key = <PGDN>, clearmods = all),
                 Redirect(key = <PGDN>, clearmods = all)]};
@@ -175,7 +175,7 @@ xkb_symbols "basic" {
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
                 LockMods(mods=Lock), LockMods(mods=Lock)]};
 
-	key<AB08> {[h, H, 6, NoSymbol, Left, Left, F6, F6],
+	key<AB08> {[h, H, 6, asciicircum, Left, Left, F6, F6],
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
                     NoAction(), NoAction(),
                 Redirect(key = <FK06>, clearmods = all),
