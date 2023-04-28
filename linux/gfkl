@@ -108,7 +108,7 @@ xkb_symbols "basic" {
                 Redirect(key = <PGDN>, clearmods = all),
                 Redirect(key = <PGDN>, clearmods = all)]};
 
-    key<AC08> {[n, N, 7, backslash, Down, Down, F7, F7],
+    key<AC08> {[n, N, 7, asciitilde, Down, Down, F7, F7],
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
                     NoAction(), NoAction(),
                 Redirect(key = <FK07>, clearmods = all),
@@ -171,7 +171,7 @@ xkb_symbols "basic" {
     key<AB05> {[NoSymbol, NoSymbol, NoSymbol, NoSymbol]};
 	key<AB06> {[x, X, NoSymbol, NoSymbol]};
 
-	key<AB07> {[b, B, asciitilde, NoSymbol, Caps_Lock, Caps_Lock],
+	key<AB07> {[b, B, backslash, NoSymbol, Caps_Lock, Caps_Lock],
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
                 LockMods(mods=Lock), LockMods(mods=Lock)]};
 
