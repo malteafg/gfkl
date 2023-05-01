@@ -58,7 +58,7 @@ xkb_symbols "basic" {
                 Redirect(key = <FK12>, clearmods = all),
                 Redirect(key = <FK12>, clearmods = all)]};
 
-    key<AD12> {[minus, underscore, minus, underscore]};
+    key<AD12> {[underscore, underscore, minus, minus]};
 
 
 // MIDDLE ROW ==================================================================
