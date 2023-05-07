@@ -58,7 +58,7 @@ xkb_symbols "basic" {
                 Redirect(key = <FK12>, clearmods = all),
                 Redirect(key = <FK12>, clearmods = all)]};
 
-    key<AD12> {[underscore, underscore, minus, minus]};
+    key<AD12> {[minus, apostrophe, minus, apostrophe]};
 
 
 // MIDDLE ROW ==================================================================
@@ -127,7 +127,7 @@ xkb_symbols "basic" {
                 Redirect(key = <FK09>, clearmods = all)]};
 
     key<AC11> {[o, O, 0, grave, BackSpace, BackSpace, BackSpace, BackSpace]};
-    key<BKSL> {[apostrophe, quotedbl, apostrophe, quotedbl,
+    key<BKSL> {[underscore, quotedbl, underscore, quotedbl,
                 Delete, Delete, Delete, Delete]};
 
 
