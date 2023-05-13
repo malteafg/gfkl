@@ -171,7 +171,7 @@ xkb_symbols "basic" {
     key<AB05> {[NoSymbol, NoSymbol, NoSymbol, NoSymbol]};
 	key<AB06> {[x, X, NoSymbol, NoSymbol]};
 
-	key<AB07> {[b, B, backslash, NoSymbol, Caps_Lock, Caps_Lock],
+	key<AB07> {[b, B, backslash, backslash, Caps_Lock, Caps_Lock],
                 actions[Group1]=[NoAction(), NoAction(), NoAction(), NoAction(),
                 LockMods(mods=Lock), LockMods(mods=Lock)]};
 
