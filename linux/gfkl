@@ -34,7 +34,7 @@ xkb_symbols "basic" {
         ]
     };
     key<AD05> {
-        [k, K, U00E6, U00C6, XF86AudioRaiseVolume],
+        [k, K, asciicircum, NoSymbol, XF86AudioRaiseVolume],
         actions[Group1]=[
             NoAction(), NoAction(), NoAction(), NoAction(),	Redirect(key=<VOL+>, clearmods=all)
         ]
@@ -74,7 +74,7 @@ xkb_symbols "basic" {
         ]
     };
     key<AD11> {
-        [equal, percent, equal, percent, End, End, F12, F12],
+        [equal, backslash, equal, backslash, End, End, F12, F12],
         actions[Group1]=[
             NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
             Redirect(key = <FK12>, clearmods = all),
@@ -127,7 +127,7 @@ xkb_symbols "basic" {
         ]
     };
     key<AC05> {
-        [g, G, U00F8, U00D8, XF86AudioLowerVolume],
+        [g, G, percent, NoSymbol, XF86AudioLowerVolume],
         actions[Group1]=[
             NoAction(), NoAction(), NoAction(), NoAction(), Redirect(key=<VOL->, clearmods=all)
         ]
@@ -178,7 +178,10 @@ xkb_symbols "basic" {
 
     // LOWER ROW ===================================================================================
     key<LSGT> {
-        [slash, question, slash, question]
+        [slash, question, slash, question, Caps_Lock, Caps_Lock],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(), LockMods(mods=Lock), LockMods(mods=Lock)
+        ]
     };
     key<AB01> {
         [v, V, less, NoSymbol, Undo, Redo],
@@ -208,7 +211,7 @@ xkb_symbols "basic" {
         ]
     };
     key<AB04> {
-        [j, J, U00E5, U00C5, XF86Paste, XF86Paste],
+        [j, J, NoSymbol, NoSymbol, XF86Paste, XF86Paste],
         actions[Group1]=[
             NoAction(), NoAction(), NoAction(), NoAction(),
             Redirect(key = <AB01>, mods = Control, clearmods = LevelFive), 
@@ -222,13 +225,10 @@ xkb_symbols "basic" {
         [x, X, NoSymbol, NoSymbol]
     };
     key<AB07> {
-        [b, B, backslash, backslash, Caps_Lock, Caps_Lock],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(), LockMods(mods=Lock), LockMods(mods=Lock)
-        ]
+        [b, B, NoSymbol, NoSymbol]
     };
     key<AB08> {
-        [h, H, 6, asciicircum, Left, Left, F6, F6],
+        [h, H, 6, NoSymbol, Left, Left, F6, F6],
         actions[Group1]=[
             NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
             Redirect(key = <FK06>, clearmods = all),
@@ -273,9 +273,9 @@ xkb_symbols "basic" {
 
     // NUMBERS FOR GAMING
     key<AE01> {[1, NoSymbol]};
-    key<AE02> {[2, NoSymbol]};
-    key<AE03> {[3, NoSymbol]};
-    key<AE04> {[4, NoSymbol]};
+    key<AE02> {[2, NoSymbol, U00E6, U00C6]};
+    key<AE03> {[3, NoSymbol, U00F8, U00D8]};
+    key<AE04> {[4, NoSymbol, U00E5, U00C5]};
     key<AE05> {[5, NoSymbol]};
     key<AE06> {[6, NoSymbol]};
     key<AE07> {[7, NoSymbol]};
