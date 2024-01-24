@@ -177,11 +177,14 @@ xkb_symbols "basic" {
 
 
     // LOWER ROW ===================================================================================
+//    key<LSGT> {
+//        [slash, question, slash, question, Caps_Lock, Caps_Lock],
+//        actions[Group1]=[
+//            NoAction(), NoAction(), NoAction(), NoAction(), LockMods(mods=Lock), LockMods(mods=Lock)
+//        ]
+//    };
     key<LSGT> {
-        [slash, question, slash, question, Caps_Lock, Caps_Lock],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(), LockMods(mods=Lock), LockMods(mods=Lock)
-        ]
+        [Shift_L, X, Shift_L, NoSymbol, Shift_L, Shift_L, Shift_L, Shift_L]
     };
     key<AB01> {
         [v, V, less, NoSymbol, Undo, Redo],
@@ -226,7 +229,10 @@ xkb_symbols "basic" {
         [NoSymbol, NoSymbol]
     };
     key<AB07> {
-        [b, B, NoSymbol, NoSymbol]
+        [b, B, NoSymbol, NoSymbol, Caps_Lock, Caps_Lock],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(), LockMods(mods=Lock), LockMods(mods=Lock)
+        ]
     };
     key<AB08> {
         [h, H, 6, NoSymbol, Left, Left, F6, F6],
@@ -256,7 +262,7 @@ xkb_symbols "basic" {
             Redirect(key = <DELE>, mods = Control, clearmods = LevelFive)
         ]
     };
-    key<RTSH> {[x, X, NoSymbol, NoSymbol]};
+    key<RTSH> {[Shift_R, question, Shift_R, NoSymbol, Shift_R, Shift_R, Shift_R, Shift_R]};
 
     // FIX MODIFIERS ===============================================================================
     key<TLDE> {[NoSymbol, NoSymbol]};
@@ -265,8 +271,8 @@ xkb_symbols "basic" {
     key<LFSH> {[Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L]};
     key<LCTL> {[Tab, Tab], actions[Group1] = [NoAction(), Redirect(key = <LCTL>, mods = Shift)]};
     key<LALT> {[Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L]};
-    key<BKSP> {[space, space]};
-    key<SPCE>  {[Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L]};
+    //key<BKSP> {[space, space]};
+    //key<SPCE> {[Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L]};
     key<RCTL> {[Return, Return]};
     key<LWIN> {
         [Control_L, Control_L, Control_L, Control_L, Control_L, Control_L, Control_L, Control_L]
@@ -288,8 +294,8 @@ xkb_symbols "basic" {
     key<AE10> {[0, NoSymbol]};
 
     // DISABLE UPPER ROW
-    key<AE11> {[NoSymbol, NoSymbol]};
-    key<AE12> {[NoSymbol, NoSymbol]};
+    key<AE11> {[x, NoSymbol]};
+    key<AE12> {[slash, NoSymbol]};
 };
 
 // dead_macron: on AltGr-minus
