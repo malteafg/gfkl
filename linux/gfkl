@@ -262,7 +262,8 @@ xkb_symbols "basic" {
     key<LFSH> {[Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L]};
     key<LCTL> {[Tab, Tab], actions[Group1] = [NoAction(), Redirect(key = <LCTL>, mods = Shift)]};
     key<LALT> {[Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L]};
-    key<BKSP> {[NoSymbol, NoSymbol]};
+    key<BKSP> {[space, space]};
+    key<SPCE>  {[Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L]};
     key<RCTL> {[Return, Return]};
     key<LWIN> {
         [Control_L, Control_L, Control_L, Control_L, Control_L, Control_L, Control_L, Control_L]
@@ -286,7 +287,6 @@ xkb_symbols "basic" {
     // DISABLE UPPER ROW
     key<AE11> {[NoSymbol, NoSymbol]};
     key<AE12> {[NoSymbol, NoSymbol]};
-    key<BKSP> {[NoSymbol, NoSymbol]};
 };
 
 // dead_macron: on AltGr-minus
