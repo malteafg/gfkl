@@ -222,7 +222,8 @@ xkb_symbols "basic" {
         [NoSymbol, NoSymbol, NoSymbol, NoSymbol]
     };
     key<AB06> {
-        [x, X, NoSymbol, NoSymbol]
+        //[x, X, NoSymbol, NoSymbol]
+        [NoSymbol, NoSymbol]
     };
     key<AB07> {
         [b, B, NoSymbol, NoSymbol]
@@ -255,10 +256,12 @@ xkb_symbols "basic" {
             Redirect(key = <DELE>, mods = Control, clearmods = LevelFive)
         ]
     };
+    key<RTSH> {[x, X, NoSymbol, NoSymbol]};
 
     // FIX MODIFIERS ===============================================================================
     key<TLDE> {[NoSymbol, NoSymbol]};
-    key<TAB>  {[Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L]};
+    //key<TAB>  {[Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L]};
+    key<TAB>  {[Tab, Tab]};
     key<LFSH> {[Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L]};
     key<LCTL> {[Tab, Tab], actions[Group1] = [NoAction(), Redirect(key = <LCTL>, mods = Shift)]};
     key<LALT> {[Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L]};
