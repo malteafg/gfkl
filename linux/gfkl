@@ -2,7 +2,7 @@ partial alphanumeric_keys modifier_keys
 xkb_symbols "basic" {
 
     name[Group1] = "wokmok";
-    include "level3(win_switch)"
+    include "level3(ralt_switch)"
     include "level5(caps_switch)"
  
     key.type[Group1] = "EIGHT_LEVEL";
@@ -184,7 +184,7 @@ xkb_symbols "basic" {
 //        ]
 //    };
     key<LSGT> {
-        [Super_L, X, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L]
+        [Shift_L, X, Shift_L, NoSymbol, Shift_L, Shift_L, Shift_L, Shift_L]
     };
     key<AB01> {
         [v, V, less, NoSymbol, Undo, Redo],
@@ -262,25 +262,23 @@ xkb_symbols "basic" {
             Redirect(key = <DELE>, mods = Control, clearmods = LevelFive)
         ]
     };
-    key<RTSH> {
-        [Control_R, question, Control_R, Control_R, Control_R, Control_R, Control_R, Control_R]
-    };
+    key<RTSH> {[Shift_R, question, Shift_R, NoSymbol, Shift_R, Shift_R, Shift_R, Shift_R]};
 
     // FIX MODIFIERS ===============================================================================
     key<TLDE> {[NoSymbol, NoSymbol]};
     //key<TAB>  {[Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L]};
     key<TAB>  {[Tab, Tab]};
-    //key<LFSH> {[Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L]};
+    key<LFSH> {[Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L]};
     key<LCTL> {[Tab, Tab], actions[Group1] = [NoAction(), Redirect(key = <LCTL>, mods = Shift)]};
-    key<LALT> {[Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L]};
+    key<LALT> {[Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L]};
     //key<BKSP> {[space, space]};
     //key<SPCE> {[Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L]};
     key<RCTL> {[Return, Return]};
-    //key<LWIN> {
-    //    [Control_L, Control_L, Control_L, Control_L, Control_L, Control_L, Control_L, Control_L]
-    //};
+    key<LWIN> {
+        [Control_L, Control_L, Control_L, Control_L, Control_L, Control_L, Control_L, Control_L]
+    };
     key<RTRN> {
-        [x, X] 
+        [Control_R, Control_R, Control_R, Control_R, Control_R, Control_R, Control_R, Control_R]
     };
 
     // NUMBERS FOR GAMING
