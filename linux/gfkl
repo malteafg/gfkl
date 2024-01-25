@@ -151,7 +151,6 @@ xkb_symbols "basic" {
             Redirect(key = <FK07>, clearmods = all)
         ]
     };
-
     key<AC09> {
         [e, E, 8, ampersand, Up, Up, F8, F8],
         actions[Group1]=[
@@ -177,12 +176,6 @@ xkb_symbols "basic" {
 
 
     // LOWER ROW ===================================================================================
-//    key<LSGT> {
-//        [slash, question, slash, question, Caps_Lock, Caps_Lock],
-//        actions[Group1]=[
-//            NoAction(), NoAction(), NoAction(), NoAction(), LockMods(mods=Lock), LockMods(mods=Lock)
-//        ]
-//    };
     key<LSGT> {
         [Shift_L, X, Shift_L, NoSymbol, Shift_L, Shift_L, Shift_L, Shift_L]
     };
@@ -194,7 +187,6 @@ xkb_symbols "basic" {
             Redirect(key = <AD07>, mods = Shift + Control, clearmods = LevelFive)
         ]
     };
-
     key<AB02> {
         [w, W, greater, NoSymbol, XF86Cut, XF86Cut],
         actions[Group1]=[
@@ -225,7 +217,6 @@ xkb_symbols "basic" {
         [NoSymbol, NoSymbol, NoSymbol, NoSymbol]
     };
     key<AB06> {
-        //[x, X, NoSymbol, NoSymbol]
         [NoSymbol, NoSymbol]
     };
     key<AB07> {
@@ -266,12 +257,9 @@ xkb_symbols "basic" {
 
     // FIX MODIFIERS ===============================================================================
     key<TLDE> {[NoSymbol, NoSymbol]};
-    //key<TAB>  {[Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L]};
-    key<TAB>  {[Tab, Tab]};
     key<LFSH> {[Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L]};
-    key<LCTL> {[Tab, Tab], actions[Group1] = [NoAction(), Redirect(key = <LCTL>, mods = Shift)]};
     key<LALT> {[Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L]};
-    //key<BKSP> {[space, space]};
+    key<BKSP> {[space, space]};
     //key<SPCE> {[Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L]};
     key<RCTL> {[Return, Return]};
     key<LWIN> {
