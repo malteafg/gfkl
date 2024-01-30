@@ -90,8 +90,8 @@ xkb_symbols "basic" {
         [a, A, 1, exclam, NoSymbol, NoSymbol, F1, F1],
         actions[Group1]=[
             NoAction(), NoAction(), NoAction(), NoAction(), 
-            Redirect(key = <LCTL>, mods = Control + Shift, clearmods = LevelFive),
-            Redirect(key = <LCTL>, mods = Control + Shift, clearmods = LevelFive),
+            Redirect(key = <TAB>, mods = Control + Shift, clearmods = LevelFive),
+            Redirect(key = <TAB>, mods = Control + Shift, clearmods = LevelFive),
             Redirect(key = <FK01>, clearmods = all),
             Redirect(key = <FK01>, clearmods = all)
         ]
@@ -100,8 +100,8 @@ xkb_symbols "basic" {
         [s, S, 2, at, NoSymbol, NoSymbol, F2, F2],
         actions[Group1]=[
             NoAction(), NoAction(), NoAction(), NoAction(), 
-            Redirect(key = <LCTL>, mods = Control, clearmods = LevelFive),
-            Redirect(key = <LCTL>, mods = Control, clearmods = LevelFive),
+            Redirect(key = <TAB>, mods = Control, clearmods = LevelFive),
+            Redirect(key = <TAB>, mods = Control, clearmods = LevelFive),
             Redirect(key = <FK02>, clearmods = all),
             Redirect(key = <FK02>, clearmods = all)
         ]
@@ -177,7 +177,8 @@ xkb_symbols "basic" {
 
     // LOWER ROW ===================================================================================
     key<LSGT> {
-        [Shift_L, X, Shift_L, NoSymbol, Shift_L, Shift_L, Shift_L, Shift_L]
+        //[Shift_L, X, Shift_L, NoSymbol, Shift_L, Shift_L, Shift_L, Shift_L]
+        [x, X, NoSymbol, NoSymbol]
     };
     key<AB01> {
         [v, V, less, NoSymbol, Undo, Redo],
@@ -253,14 +254,18 @@ xkb_symbols "basic" {
             Redirect(key = <DELE>, mods = Control, clearmods = LevelFive)
         ]
     };
-    key<RTSH> {[Shift_R, question, Shift_R, NoSymbol, Shift_R, Shift_R, Shift_R, Shift_R]};
+    key<RTSH> {
+        [slash, question, slash, question]
+    };
 
     // FIX MODIFIERS ===============================================================================
     key<TLDE> {[NoSymbol, NoSymbol]};
     key<LFSH> {[Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L]};
-    key<LALT> {[Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L]};
+    key<LALT> {
+        [Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L]
+    };
     key<BKSP> {[space, space]};
-    //key<SPCE> {[Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L]};
+    key<SPCE> {[Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L]};
     key<RCTL> {[Return, Return]};
     key<LWIN> {
         [Control_L, Control_L, Control_L, Control_L, Control_L, Control_L, Control_L, Control_L]
