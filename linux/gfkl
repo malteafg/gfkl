@@ -261,14 +261,16 @@ xkb_symbols "basic" {
     // FIX MODIFIERS ===============================================================================
     key<TLDE> {[asciitilde, NoSymbol]};
     key<LFSH> {[Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L]};
-    key<LALT> {
-        [Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L]
-    };
     key<BKSP> {[space, space]};
     key<SPCE> {[Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L]};
     key<RCTL> {[Return, Return]};
+    // LCTL needs to be mapped to something other than Control_L for some reason
+    key<LCTL> {[Tab, Tab]};
     key<LWIN> {
         [Control_L, Control_L, Control_L, Control_L, Control_L, Control_L, Control_L, Control_L]
+    };
+    key<LALT> {
+        [Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L]
     };
     key<RTRN> {
         [Control_R, Control_R, Control_R, Control_R, Control_R, Control_R, Control_R, Control_R]
