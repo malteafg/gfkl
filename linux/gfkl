@@ -221,7 +221,7 @@ xkb_symbols "basic" {
         [NoSymbol, NoSymbol]
     };
     key<AB07> {
-        [b, B, NoSymbol, NoSymbol, Caps_Lock, Caps_Lock],
+        [b, B, asciitilde, NoSymbol, Caps_Lock, Caps_Lock],
         actions[Group1]=[
             NoAction(), NoAction(), NoAction(), NoAction(), LockMods(mods=Lock), LockMods(mods=Lock)
         ]
@@ -259,7 +259,7 @@ xkb_symbols "basic" {
     };
 
     // FIX MODIFIERS ===============================================================================
-    key<TLDE> {[NoSymbol, NoSymbol]};
+    key<TLDE> {[asciitilde, NoSymbol]};
     key<LFSH> {[Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L]};
     key<LALT> {
         [Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L]
