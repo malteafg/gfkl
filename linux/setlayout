@@ -2,10 +2,11 @@
 
 chosen=""
 
-while getopts ":wud" opt; do
+while getopts ":wuvd" opt; do
     case $opt in
         w) chosen="wokmok";;
-        u) chosen="us";;
+        u) chosen="us-intl";;
+        v) chosen="voyager";;
         d) chosen="danish";;
         \?)
             echo "Invalid option: -$OPTARG" >&2
@@ -15,7 +16,7 @@ while getopts ":wud" opt; do
 done
 
 if [[ $# -eq 0 ]] ; then
-    echo "Usage: -w for wokmok, -u for us intl., -d for danish"
+    echo "Usage: -w for wokmok, -u for us intl., -v for voyager, -d for danish"
     exit 0
 fi
 
@@ -26,14 +27,22 @@ case "$chosen" in
         setxkbmap -layout gfkl -model pc105
         # xcape -e '#66=Escape;#23=Tab;#36=Return;#64=F12' -t 180
         xcape -e '#66=Escape;#36=Return;#64=F12' -t 180
-        xcape -e '#65=space' -t 180;;
-        # xcape -e '#40=r;#46=e' -t 180;;
+        xcape -e '#65=space' -t 180
+        # xcape -e '#40=r;#46=e' -t 180
         # xcape -e '#94=x' -t 180
-        # xcape -e '#62=slash' -t 180;;
-    "us")
-        setxkbmap -layout us -variant altgr-intl -model pc105 -option altwin:swap_lalt_lwin
-        xcape -e '#64=F12' -t 180;;
+        # xcape -e '#62=slash' -t 180
+        echo "wokmok" > "$HOME/.cache/keyboard";;
+    "us-intl")
+        # setxkbmap -layout us -variant altgr-intl -model pc105 -option altwin:swap_lalt_lwin
+        setxkbmap -layout us -variant altgr-intl -model pc105
+        xcape -e '#64=F12' -t 180
+        echo "us-intl" > "$HOME/.cache/keyboard";;
+    "voyager")
+        setxkbmap -layout us -variant altgr-intl -model pc105
+        echo "voyager" > "$HOME/.cache/keyboard";;
     "danish")
-        setxkbmap -layout dk -model pc105 -option altwin:swap_lalt_lwin
-        xcape -e '#64=F12' -t 180;;
+        # setxkbmap -layout dk -model pc105 -option altwin:swap_lalt_lwin
+        setxkbmap -layout dk -model pc105
+        xcape -e '#64=F12' -t 180
+        echo "danish" > "$HOME/.cache/keyboard";;
 esac

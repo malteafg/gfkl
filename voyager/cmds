@@ -1,0 +1,3 @@
+sudo cp 50-zsa.rules /etc/udev/rules.d/.
+sudo groupadd plugdev
+sudo usermod -aG plugdev $USER
