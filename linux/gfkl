@@ -34,7 +34,7 @@ xkb_symbols "basic" {
         ]
     };
     key<AD05> {
-        [k, K, asciicircum, NoSymbol, XF86AudioRaiseVolume],
+        [k, K, U00E6, U00C6, XF86AudioRaiseVolume],
         actions[Group1]=[
             NoAction(), NoAction(), NoAction(), NoAction(),	Redirect(key=<VOL+>, clearmods=all)
         ]
@@ -43,7 +43,7 @@ xkb_symbols "basic" {
         [NoSymbol, NoSymbol]
     };
     key<AD07> {
-        [z, Z, NoSymbol, NoSymbol, Page_Up, Page_Up],
+        [z, Z, asciicircum, NoSymbol, Page_Up, Page_Up],
         actions[Group1]=[
             NoAction(), NoAction(), NoAction(), NoAction(),
             Redirect(key = <PGUP>, clearmods = all),
@@ -127,7 +127,7 @@ xkb_symbols "basic" {
         ]
     };
     key<AC05> {
-        [g, G, percent, NoSymbol, XF86AudioLowerVolume],
+        [g, G, U00F8, U00D8, XF86AudioLowerVolume],
         actions[Group1]=[
             NoAction(), NoAction(), NoAction(), NoAction(), Redirect(key=<VOL->, clearmods=all)
         ]
@@ -177,7 +177,6 @@ xkb_symbols "basic" {
 
     // LOWER ROW ===================================================================================
     key<LSGT> {
-        //[Shift_L, X, Shift_L, NoSymbol, Shift_L, Shift_L, Shift_L, Shift_L]
         [x, X, NoSymbol, NoSymbol]
     };
     key<AB01> {
@@ -207,7 +206,7 @@ xkb_symbols "basic" {
         ]
     };
     key<AB04> {
-        [j, J, NoSymbol, NoSymbol, XF86Paste, XF86Paste],
+        [j, J, U00E5, U00C5, XF86Paste, XF86Paste],
         actions[Group1]=[
             NoAction(), NoAction(), NoAction(), NoAction(),
             Redirect(key = <AB01>, mods = Control, clearmods = LevelFive), 
@@ -221,7 +220,7 @@ xkb_symbols "basic" {
         [NoSymbol, NoSymbol]
     };
     key<AB07> {
-        [b, B, asciitilde, NoSymbol, Caps_Lock, Caps_Lock],
+        [b, B, percent, NoSymbol, Caps_Lock, Caps_Lock],
         actions[Group1]=[
             NoAction(), NoAction(), NoAction(), NoAction(), LockMods(mods=Lock), LockMods(mods=Lock)
         ]
@@ -278,9 +277,9 @@ xkb_symbols "basic" {
 
     // NUMBERS FOR GAMING
     key<AE01> {[1, NoSymbol]};
-    key<AE02> {[2, NoSymbol, U00E6, U00C6]};
-    key<AE03> {[3, NoSymbol, U00F8, U00D8]};
-    key<AE04> {[4, NoSymbol, U00E5, U00C5]};
+    key<AE02> {[2, NoSymbol]};
+    key<AE03> {[3, NoSymbol]};
+    key<AE04> {[4, NoSymbol]};
     key<AE05> {[5, NoSymbol]};
     key<AE06> {[6, NoSymbol]};
     key<AE07> {[7, NoSymbol]};
@@ -289,8 +288,8 @@ xkb_symbols "basic" {
     key<AE10> {[0, NoSymbol]};
 
     // DISABLE UPPER ROW
-    key<AE11> {[x, NoSymbol]};
-    key<AE12> {[slash, NoSymbol]};
+    key<AE11> {[NoSymbol, NoSymbol]};
+    key<AE12> {[NoSymbol, NoSymbol]};
 };
 
 // dead_macron: on AltGr-minus
