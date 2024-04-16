@@ -20,92 +20,42 @@ return
 ; Hot keys with CapsLock modifier.  See https://autohotkey.com/docs/Hotkeys.htm#combo
 ;================================================================================================
 
-; GOOGLE the selected text.
-; CapsLock & g::
-;     ClipboardGet()
-;     ClipboardRestore()
-; Return
-
 ; Navigation
 CapsLock & e::Up
-CapsLock & l::Left
+CapsLock & h::Left
 CapsLock & n::Down
 CapsLock & i::Right
 CapsLock & u::^Left
 CapsLock & y::^Right
-CapsLock & (::^Down
-CapsLock & )::^Up
 CapsLock & f::Home
 CapsLock & `;::End
-CapsLock & =::PgUp
-CapsLock & -::PgDn
-; CapsLock & e::WheelUp
-; CapsLock & d::WheelDown
+CapsLock & z::PgUp
+CapsLock & p::PgDn
 
 CapsLock & '::Delete
 CapsLock & o::Backspace
 CapsLock & .::^Delete
 CapsLock & ,::^Backspace
-CapsLock & w::CapsLock
-CapsLock & m::Insert
-CapsLock & +::AppsKey
+CapsLock & b::CapsLock
 
 ; Media
 CapsLock & q::Media_Play_Pause
 CapsLock & c::Media_Prev
-CapsLock & h::Media_Next
+CapsLock & l::Media_Next
 CapsLock & k::Send {Volume_Up}
 CapsLock & g::Send {Volume_Down}
-CapsLock & p::Send {Volume_Mute}
+CapsLock & m::Send {Volume_Mute}
 
 ; Shortcuts
-CapsLock & z::^z
-CapsLock & x::^x
+CapsLock & v::^z
+CapsLock & w::^x
 CapsLock & d::^c
-CapsLock & v::^v
-CapsLock & a::^a
-CapsLock & s::^s
-CapsLock & r::^f
+CapsLock & j::^v
+CapsLock & a::^+Tab
+CapsLock & s::^Tab
+CapsLock & r::^w
 CapsLock & t::^t
-
-; Top row
-CapsLock & [::^+Tab
-CapsLock & ]::^Tab
-CapsLock & *::^F4
 
 CapsLock & Space::Space
 CapsLock & Enter::Enter
 CapsLock & Backspace::Backspace
-CapsLock & Tab::Run chrome.exe
-CapsLock & Esc::!F4
-
-
-;+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-;================================================================================================
-; Clipboard helper functions.
-;================================================================================================
-ClipboardGet()
-{
-    OldClipboard:= ClipboardAll                         ;Save existing clipboard.
-    Clipboard:= ""
-    Send, ^c                                            ;Copy selected test to clipboard
-	ClipWait 0
-    If ErrorLevel
-        {
-        Run chrome.exe
-        Return
-        }
-	Else {
-		Run http://www.google.com/search?q=%clipboard%             ; Launch with contents of clipboard
-		Return
-	}
-}
-
-
-ClipboardRestore()
-{
-    Clipboard:= OldClipboard
-}
-
-
