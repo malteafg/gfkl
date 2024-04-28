@@ -108,13 +108,13 @@ xkb_symbols "basic" {
     key<AC09> {[i, I]};
 
     // LOWER ROW
-    key<LSGT> {[x, X]};
     key<AB01> {[v, V]};
     key<AB02> {[w, W]};
     key<AB03> {[d, D]};
     key<AB04> {[j, J]};
-    key<AB05> {[b, B]};
-    key<AB06> {[h, H]};
+    key<AB05> {[x, X]};
+    key<AB06> {[b, B]};
+    key<AB07> {[h, H]};
 };
 
 partial alphanumeric_keys modifier_keys
