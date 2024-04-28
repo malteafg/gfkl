@@ -1,10 +1,9 @@
 # gfkl/wokmok
 
 gfkl/wokmok is a keyboard layout that I have created and use as my daily driver. It is intended to
-make it very comfortable to type both regular english and programming languages. The layout is built
-for a roughly 60% keyboard layout (or smaller). I currently do not own an ortholinear keyboard, but
-the design choices are made such that they also fit with ortholinear keyboards. Images are created
-with [this website](http://www.keyboard-layout-editor.com/)
+make it very comfortable to type both regular english and programming languages. The layout uses
+quite a fewer keys than standard layouts, making it possible to use for various custom keyboards.
+Images are created with [this website](http://www.keyboard-layout-editor.com/).
 
 ### Contents
 * [Current version](#current-version)
@@ -70,9 +69,9 @@ various Colemak layouts see [this](https://notgate.github.io/layout/).
 
 ## Layer 5
 
-This layer is very nice. It is also inspired by DreymaR's [Big Bag of
-Tricks](https://dreymar.colemak.org/). The '^' signalizes that the key is sent with the ctrl
-modifier enabled.
+This layer is very nice. It is actived by holding the caps lock key. It is also inspired by
+DreymaR's [Big Bag of Tricks](https://dreymar.colemak.org/). The '^' signalizes that the key is sent
+with the ctrl modifier enabled.
 
 ![Layer 5](images/layer5.png)
 
