@@ -1,3 +1,7 @@
 #! /bin/bash
 
-sudo ln -s ~/repos/gfkl/linux/gfkl /usr/share/X11/xkb/symbols/gfkl
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+sudo ln -s $SCRIPT_DIR/gfkl /usr/share/X11/xkb/symbols/gfkl
+sudo ln -s $SCRIPT_DIR/wokmok /usr/share/X11/xkb/symbols/wokmok
+sudo ln -s $SCRIPT_DIR/layer5 /usr/share/X11/xkb/symbols/layer5

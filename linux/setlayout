@@ -1,5 +1,7 @@
 #!/bin/sh
 
+CACHE_LOC="$HOME/.cache/gfkl"
+
 chosen=""
 
 while getopts ":wuvd" opt; do
@@ -25,24 +27,19 @@ killall -q xcape
 case "$chosen" in
     "wokmok") 
         setxkbmap -layout gfkl -model pc105
-        # xcape -e '#66=Escape;#23=Tab;#36=Return;#64=F12' -t 180
-        xcape -e '#66=Escape;#36=Return;#64=F12' -t 180
-        xcape -e '#65=space' -t 180
-        # xcape -e '#40=r;#46=e' -t 180
-        # xcape -e '#94=x' -t 180
-        # xcape -e '#62=slash' -t 180
-        echo "wokmok" > "$HOME/.cache/keyboard";;
+        xcape -e '#66=Escape;#36=Return;#64=F12;#65=space' -t 180
+        echo "wokmok" > "$CACHE_LOC";;
     "us-intl")
         # setxkbmap -layout us -variant altgr-intl -model pc105 -option altwin:swap_lalt_lwin
         setxkbmap -layout us -variant altgr-intl -model pc105
         xcape -e '#64=F12' -t 180
-        echo "us-intl" > "$HOME/.cache/keyboard";;
+        echo "us-intl" > "$CACHE_LOC";;
     "voyager")
         setxkbmap -layout us -variant altgr-intl -model pc105
-        echo "voyager" > "$HOME/.cache/keyboard";;
+        echo "voyager" > "$CACHE_LOC";;
     "danish")
         # setxkbmap -layout dk -model pc105 -option altwin:swap_lalt_lwin
         setxkbmap -layout dk -model pc105
         xcape -e '#64=F12' -t 180
-        echo "danish" > "$HOME/.cache/keyboard";;
+        echo "danish" > "$CACHE_LOC";;
 esac

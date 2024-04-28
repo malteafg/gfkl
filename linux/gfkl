@@ -264,7 +264,7 @@ xkb_symbols "basic" {
     key<SPCE> {[Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L]};
     key<RCTL> {[Return, Return]};
     // LCTL needs to be mapped to something other than Control_L for some reason
-    key<LCTL> {[Tab, Tab]};
+    key<LCTL> {[BackSpace, BackSpace]};
     key<LWIN> {
         [Control_L, Control_L, Control_L, Control_L, Control_L, Control_L, Control_L, Control_L]
     };

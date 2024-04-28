@@ -1,0 +1,160 @@
+partial alphanumeric_keys modifier_keys
+xkb_symbols "basic" {
+    name[Group1] = "wokmok_gfkl";
+    include "level3(ralt_switch)"
+
+    // UPPER ROW ===================================================================================
+    key<AD01> {[q, Q, bracketleft, NoSymbol]};
+    key<AD02> {[c, C, braceleft, NoSymbol]};
+    key<AD03> {[l, L, braceright, NoSymbol]};
+    key<AD04> {[m, M, bracketright, NoSymbol]};
+    key<AD05> {[k, K, U00E6, U00C6]};
+    key<AD06> {[NoSymbol, NoSymbol]};
+    key<AD07> {[z, Z, asciicircum, NoSymbol]};
+    key<AD08> {[f, F, plus, NoSymbol]};
+    key<AD09> {[u, U, parenleft, NoSymbol]};
+    key<AD10> {[y, Y, parenright, NoSymbol]};
+    key<AD11> {[equal, backslash, equal, backslash]};
+    key<AD12> {[minus, apostrophe, minus, apostrophe]};
+
+    // MIDDLE ROW ==================================================================================
+    key<AC01> {[a, A, 1, exclam]};
+    key<AC02> {[s, S, 2, at]};
+    key<AC03> {[r, R, 3, numbersign]};
+    key<AC04> {[t, T, 4, dollar]};
+    key<AC05> {[g, G, U00F8, U00D8]};
+    key<AC06> {[NoSymbol, NoSymbol]};
+    key<AC07> {[p, P, asterisk, NoSymbol]};
+    key<AC08> {[n, N, 7, asciitilde]};
+    key<AC09> {[e, E, 8, ampersand]};
+    key<AC10> {[i, I, 9, bar]};
+    key<AC11> {[o, O, 0, grave]};
+    key<BKSL> {[underscore, quotedbl, underscore, quotedbl]};
+
+
+    // LOWER ROW ===================================================================================
+    key<LSGT> {[x, X, NoSymbol, NoSymbol]};
+    key<AB01> {[v, V, less, NoSymbol]};
+    key<AB02> {[w, W, greater, NoSymbol]};
+    key<AB03> {[d, D, 5, NoSymbol]};
+    key<AB04> {[j, J, U00E5, U00C5]};
+    key<AB05> {[NoSymbol, NoSymbol, NoSymbol, NoSymbol]};
+    key<AB06> {[NoSymbol, NoSymbol]};
+    key<AB07> {[b, B, percent, NoSymbol]};
+    key<AB08> {[h, H, 6, NoSymbol]};
+    key<AB09> {[comma, semicolon, comma, semicolon]};
+    key<AB10> {[period, colon, period, colon]};
+    key<RTSH> {[slash, question, slash, question]};
+
+    // FIX MODIFIERS ===============================================================================
+    key<TLDE> {[asciitilde, NoSymbol]};
+    key<LFSH> {[Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L, Alt_L]};
+    key<BKSP> {[space, space]};
+    key<SPCE> {[Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L, Shift_L]};
+    key<RCTL> {[Return, Return]};
+    // LCTL needs to be mapped to something other than Control_L for some reason
+    key<LCTL> {[BackSpace, BackSpace]};
+    key<LWIN> {
+        [Control_L, Control_L, Control_L, Control_L, Control_L, Control_L, Control_L, Control_L]
+    };
+    key<LALT> {
+        [Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L, Super_L]
+    };
+    key<RTRN> {
+        [Control_R, Control_R, Control_R, Control_R, Control_R, Control_R, Control_R, Control_R]
+    };
+
+    // NUMBERS FOR GAMING
+    key<AE01> {[1, NoSymbol]};
+    key<AE02> {[2, NoSymbol]};
+    key<AE03> {[3, NoSymbol]};
+    key<AE04> {[4, NoSymbol]};
+    key<AE05> {[5, NoSymbol]};
+    key<AE06> {[6, NoSymbol]};
+    key<AE07> {[7, NoSymbol]};
+    key<AE08> {[8, NoSymbol]};
+    key<AE09> {[9, NoSymbol]};
+    key<AE10> {[0, NoSymbol]};
+
+    // DISABLE UPPER ROW
+    key<AE11> {[NoSymbol, NoSymbol]};
+    key<AE12> {[NoSymbol, NoSymbol]};
+};
+
+partial alphanumeric_keys modifier_keys
+xkb_symbols "wokmok" {
+    name[Group1] = "wokmok_basic";
+
+    // UPPER ROW
+    key<AD01> {[q, Q]};
+    key<AD02> {[c, C]};
+    key<AD03> {[l, L]};
+    key<AD04> {[m, M]};
+    key<AD05> {[k, K]};
+    key<AD06> {[z, Z]};
+    key<AD07> {[f, F]};
+    key<AD08> {[u, U]};
+    key<AD09> {[y, Y]};
+
+    // MIDDLE ROW
+    key<AC01> {[a, A]};
+    key<AC02> {[s, S]};
+    key<AC03> {[r, R]};
+    key<AC04> {[t, T]};
+    key<AC05> {[g, G]};
+    key<AC06> {[p, P]};
+    key<AC07> {[n, N]};
+    key<AC08> {[e, E]};
+    key<AC09> {[i, I]};
+
+    // LOWER ROW
+    key<LSGT> {[x, X]};
+    key<AB01> {[v, V]};
+    key<AB02> {[w, W]};
+    key<AB03> {[d, D]};
+    key<AB04> {[j, J]};
+    key<AB05> {[b, B]};
+    key<AB06> {[h, H]};
+};
+
+partial alphanumeric_keys modifier_keys
+xkb_symbols "us" {
+    include "us(altgr-intl)"
+    include "wokmok(wokmok)"
+
+    name[Group1] = "wokmok_us";
+
+    key<AD10> {[semicolon, colon, odiaeresis, Odiaeresis]};
+    key<AC10> {[o, O, paragraph, degree]};
+};
+
+partial alphanumeric_keys modifier_keys
+xkb_symbols "dk" {
+    include "dk(nodeadkeys)"
+    include "wokmok(wokmok)"
+
+    name[Group1] = "wokmok_dk";
+
+    key<AD10> {[ae, AE, acute, doubleacute]};
+    key<AC10> {[o, O, thorn, THORN]};
+};
+
+// dead_macron: on AltGr-minus
+// dead_breve: on AltGr-parenleft
+// dead_abovedot: on AltGr-period
+// dead_abovering: on AltGr-0
+// dead_doubleacute: on AltGr-equal (as quotedbl is already used)
+// dead_caron: on AltGr-less (AltGr-shift-comma)
+// dead_cedilla: on AltGr-comma
+// dead_ogonek: on AltGr-semicolon
+// dead_belowdot: on AltGr-underscore (AltGr-shift-minus)
+// dead_hook: on AltGr-question
+// dead_horn: on AltGr-plus (AltGr-shift-equal)
+// dead_diaeresis: on AltGr-colon (Alt-shift-semicolon)
+//
+// those were already there:
+// dead_grave
+// dead_acute
+// dead_circumflex
+// dead_tilde
+// dead_diaeresis
