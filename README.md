@@ -8,10 +8,9 @@ Images are created with [this website](http://www.keyboard-layout-editor.com/).
 ### Contents
 * [Current version](#current-version)
 * [gfkl](#gfkl)
+* [wokmok](#wokmok)
+* [Analysis of wokmok](#analysis)
 * [Layer 5](#layer-5)
-* [Wokmok](#wokmok)
-* [Analysis of Wokmok](#analysis)
-* [Usage with window manager](#usage-with-window-manager)
 
 ## Current version
 
@@ -73,7 +72,7 @@ This layer is very nice. It is actived by holding the caps lock key. It is also 
 DreymaR's [Big Bag of Tricks](https://dreymar.colemak.org/). The '^' signalizes that the key is sent
 with the ctrl modifier enabled.
 
-![Layer 5](images/layer5.png)
+![Layer 5 - with gfkl](images/layer5_gfkl.png)
 
 * The green keys on the right hand are regular arrow keys.
 * The red keys on the right hand deletes stuff both regularly and by word.
@@ -87,3 +86,7 @@ with the ctrl modifier enabled.
 * Lastly, when also holding down the altgr button, layer 7 is activated which simply contains f-keys
   at home row positions.
 
+Layer 5 is also implemented for regular keyboard layouts, not using gfkl. In this case layer 5 looks
+like the following:
+
+![Layer 5 - without gfkl](images/layer5.png)
