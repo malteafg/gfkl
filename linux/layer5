@@ -390,16 +390,38 @@ partial alphanumeric_keys modifier_keys
 xkb_symbols "wokmok_us" {
     include "wokmok(us)"
     include "layer5(basic)"
+
+    name[Group1] = "layer5_wokmok_us";
 };
 
 partial alphanumeric_keys modifier_keys
 xkb_symbols "wokmok_dk" {
     include "wokmok(dk)"
     include "layer5(basic)"
+
+    name[Group1] = "layer5_wokmok_dk";
 };
 
 partial alphanumeric_keys modifier_keys
 xkb_symbols "wokmok_gfkl" {
-    include "wokmok(basic)"
+    include "wokmok(gfkl)"
     include "layer5(gfkl)"
+
+    name[Group1] = "layer5_wokmok_gfkl";
+};
+
+partial alphanumeric_keys modifier_keys
+xkb_symbols "us" {
+    include "us(altgr-intl)"
+    include "layer5(basic)"
+
+    name[Group1] = "layer5_us";
+};
+
+partial alphanumeric_keys modifier_keys
+xkb_symbols "dk" {
+    include "dk(nodeadkeys)"
+    include "layer5(basic)"
+
+    name[Group1] = "layer5_dk";
 };

@@ -1,45 +1,64 @@
 #!/bin/sh
 
-CACHE_LOC="$HOME/.cache/gfkl"
-
-chosen=""
-
-while getopts ":wuvd" opt; do
-    case $opt in
-        w) chosen="wokmok";;
-        u) chosen="us-intl";;
-        v) chosen="voyager";;
-        d) chosen="danish";;
-        \?)
-            echo "Invalid option: -$OPTARG" >&2
-            exit
-            ;;
-    esac
-done
-
 if [[ $# -eq 0 ]] ; then
-    echo "Usage: -w for wokmok, -u for us intl., -v for voyager, -d for danish"
+    echo "Following keyboard layouts are available:
+
+    wokmok
+    wokmok_dk
+    wokmok_us
+
+    dk
+    us
+
+    layer5_wokmok_dk
+    layer5_wokmok_us
+    layer5_dk
+    layer5_us
+    "
     exit 0
 fi
 
-killall -q xcape
+if command -v xcape &> /dev/null
+then
+    killall -q xcape
+fi
 
-case "$chosen" in
+case "$1" in
     "wokmok") 
-        setxkbmap -layout gfkl -model pc105
+        if ! command -v xcape &> /dev/null
+        then
+            echo "ERROR: wokmok should not be used without xcape installed. Note that xcape is not available on wayland"
+            exit 0
+        fi
+        setxkbmap -layout layer5 -variant wokmok_gfkl -model pc105
         xcape -e '#66=Escape;#36=Return;#64=F12;#65=space' -t 180
-        echo "wokmok" > "$CACHE_LOC";;
-    "us-intl")
-        # setxkbmap -layout us -variant altgr-intl -model pc105 -option altwin:swap_lalt_lwin
-        setxkbmap -layout us -variant altgr-intl -model pc105
-        xcape -e '#64=F12' -t 180
-        echo "us-intl" > "$CACHE_LOC";;
-    "voyager")
-        setxkbmap -layout us -variant altgr-intl -model pc105
-        echo "voyager" > "$CACHE_LOC";;
-    "danish")
+        ;;
+    "wokmok_dk") 
+        setxkbmap -layout wokmok -variant dk -model pc105
+        ;;
+    "wokmok_us") 
+        setxkbmap -layout wokmok -variant us -model pc105
+        ;;
+    "dk")
         # setxkbmap -layout dk -model pc105 -option altwin:swap_lalt_lwin
         setxkbmap -layout dk -model pc105
-        xcape -e '#64=F12' -t 180
-        echo "danish" > "$CACHE_LOC";;
+        # xcape -e '#64=F12' -t 180
+        ;;
+    "us")
+        # setxkbmap -layout us -variant altgr-intl -model pc105 -option altwin:swap_lalt_lwin
+        setxkbmap -layout us -variant altgr-intl -model pc105
+        # xcape -e '#64=F12' -t 180
+        ;;
+    "layer5_wokmok_dk")
+        setxkbmap -layout layer5 -variant wokmok_dk -model pc105
+        ;;
+    "layer5_wokmok_us")
+        setxkbmap -layout layer5 -variant wokmok_us -model pc105
+        ;;
+    "layer5_dk")
+        setxkbmap -layout layer5 -variant dk -model pc105
+        ;;
+    "layer5_us")
+        setxkbmap -layout layer5 -variant us -model pc105
+        ;;
 esac
