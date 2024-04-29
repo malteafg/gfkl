@@ -1,0 +1,4 @@
+#! /bin/bash
+
+sudo rm /usr/share/X11/xkb/symbols/wokmok
+sudo rm /usr/share/X11/xkb/symbols/layer5

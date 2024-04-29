@@ -72,7 +72,7 @@ fi
 case "$1" in
     "dmenu")
         check_dmenu
-        chosen="$(echo "$layouts" | dmenu -i -c -fn 'pixelsize=20' -l 9)" || exit 1
+        chosen="$(echo "$layouts" | dmenu -i -c -fn 'pixelsize=20' -l 10)" || exit 1
         ;;
     *)
         chosen="$1"
