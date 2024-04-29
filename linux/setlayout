@@ -1,6 +1,16 @@
 #!/bin/sh
 
-if [[ $# -eq 0 ]] ; then
+layouts="wokmok
+wokmok_dk
+wokmok_us
+dk
+us
+layer5_wokmok_dk
+layer5_wokmok_us
+layer5_dk
+layer5_us"
+
+function print_help() {
     echo "Following keyboard layouts are available:
 
     wokmok
@@ -14,29 +24,69 @@ if [[ $# -eq 0 ]] ; then
     layer5_wokmok_us
     layer5_dk
     layer5_us
+
+    Note that if dmenu is installed, setlayout dmenu will bring up a prompt to select a layout
     "
     exit 0
-fi
+}
 
-if command -v xcape &> /dev/null
-then
-    killall -q xcape
+function kill_xcape() {
+    if command -v xcape &> /dev/null
+    then
+        killall -q xcape
+    fi
+}
+
+function check_wayland() {
+    if [ ! -z "$WAYLAND_DISPLAY" ]; then
+        echo "ERROR: this version of wokmok does not work on wayland due to xcape not being available. Consider using wokmok_dk or wokmok_us instead."
+        exit 1
+    fi
+}
+
+function check_xcape() {
+    if ! command -v xcape &> /dev/null
+    then
+        echo "ERROR: wokmok cannot be used without xcape installed. Please install xcape. Note that xcape is not available on wayland."
+        exit 1
+    fi
+}
+
+function check_dmenu() {
+    if ! command -v dmenu &> /dev/null
+    then
+        echo "ERROR: dmenu is not installed, choose a layout manually."
+        print_help
+    fi
+}
+
+if [[ $# -ne 1 ]] ; then
+    print_help
 fi
 
 case "$1" in
-    "wokmok") 
-        if ! command -v xcape &> /dev/null
-        then
-            echo "ERROR: wokmok should not be used without xcape installed. Note that xcape is not available on wayland"
-            exit 0
-        fi
+    "dmenu")
+        check_dmenu
+        chosen="$(echo "$layouts" | dmenu -i -c -fn 'pixelsize=20' -l 9)" || exit 1
+        ;;
+    *)
+        chosen="$1"
+        ;;
+esac
+
+kill_xcape
+
+case "$chosen" in
+    "wokmok")
+        check_wayland
+        check_xcape
         setxkbmap -layout layer5 -variant wokmok_gfkl -model pc105
         xcape -e '#66=Escape;#36=Return;#64=F12;#65=space' -t 180
         ;;
-    "wokmok_dk") 
+    "wokmok_dk")
         setxkbmap -layout wokmok -variant dk -model pc105
         ;;
-    "wokmok_us") 
+    "wokmok_us")
         setxkbmap -layout wokmok -variant us -model pc105
         ;;
     "dk")
@@ -60,5 +110,9 @@ case "$1" in
         ;;
     "layer5_us")
         setxkbmap -layout layer5 -variant us -model pc105
+        ;;
+    *)
+        echo "ERROR: $chosen is not a valid layout."
+        print_help
         ;;
 esac
