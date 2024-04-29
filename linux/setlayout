@@ -1,5 +1,7 @@
 #!/bin/sh
 
+CACHE_LOC="$HOME/.cache/gfkl"
+
 layouts="wokmok
 wokmok_dk
 wokmok_us
@@ -8,7 +10,8 @@ us
 layer5_wokmok_dk
 layer5_wokmok_us
 layer5_dk
-layer5_us"
+layer5_us
+custom"
 
 function print_help() {
     echo "Following keyboard layouts are available:
@@ -24,6 +27,8 @@ function print_help() {
     layer5_wokmok_us
     layer5_dk
     layer5_us
+
+    custom
 
     Note that if dmenu is installed, setlayout dmenu will bring up a prompt to select a layout
     "
@@ -111,8 +116,13 @@ case "$chosen" in
     "layer5_us")
         setxkbmap -layout layer5 -variant us -model pc105
         ;;
+    "custom")
+        setxkbmap -layout us -variant altgr-intl -model pc105
+        ;;
     *)
         echo "ERROR: $chosen is not a valid layout."
         print_help
         ;;
 esac
+
+echo "$chosen" > "$CACHE_LOC"
