@@ -14,8 +14,8 @@ xkb_symbols "gfkl" {
     key<AD08> {[f, F, plus, NoSymbol]};
     key<AD09> {[u, U, parenleft, NoSymbol]};
     key<AD10> {[y, Y, parenright, NoSymbol]};
-    key<AD11> {[equal, backslash, equal, backslash]};
-    key<AD12> {[minus, apostrophe, minus, apostrophe]};
+    key<AD11> {[equal, apostrophe, equal, NoSymbol]};
+    key<AD12> {[NoSymbol, NoSymbol]};
 
     // MIDDLE ROW ==================================================================================
     key<AC01> {[a, A, 1, exclam]};
@@ -29,11 +29,11 @@ xkb_symbols "gfkl" {
     key<AC09> {[e, E, 8, ampersand]};
     key<AC10> {[i, I, 9, bar]};
     key<AC11> {[o, O, 0, grave]};
-    key<BKSL> {[underscore, quotedbl, underscore, quotedbl]};
+    key<BKSL> {[underscore, quotedbl, minus, NoSymbol]};
 
 
     // LOWER ROW ===================================================================================
-    key<LSGT> {[x, X, NoSymbol, NoSymbol]};
+    key<LSGT> {[x, X, backslash, NoSymbol]};
     key<AB01> {[v, V, less, NoSymbol]};
     key<AB02> {[w, W, greater, NoSymbol]};
     key<AB03> {[d, D, 5, NoSymbol]};
