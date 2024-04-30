@@ -38,8 +38,10 @@ changes that have been made compared to a regular keyboard layout.
 * Some characters (not letters or numbers) are positioned such that they are independent of whether
   layer 3 is currently activated. This makes the annoyance of having to use altgr even smaller.
 
-* The lshift key have been moved to the tab key, such that one can type with a straight wrist. If
-  lshift is clicked it acts as a regular tab key.
+* The shift key have been moved to the space key, which emits the space character if clicked fast.
+  This allows one to shift with the left thumb and press space with the right thumb. This removes
+  work from the little fingers that are weak, and adds work to the underutized thumbs that are
+  strong.
 
 * What used to be the caps lock key now acts as a modifier for layer 5. If the button is clicked it
   acts as esc.
@@ -61,7 +63,7 @@ moving the punctuation characters back to their original positions.
 
 I tested the wokmok layout using the [DH
 analyzer](https://colemakmods.github.io/mod-dh/analyze.html) and the
-[stevepanalyzer](https://colemakmods.github.io/mod-dh/analyze.html). Wokmok generally scores
+[stevepanalyzer](https://stevep99.github.io/keyboard-layout-analyzer/#/about). Wokmok generally scores
 slightly better than Colemak, and slightly worse than the ISRT layout. For more details, see the
 images inside the analyzer folder. For a detailed analysis of how the ISRT layout compares to
 various Colemak layouts see [this](https://notgate.github.io/layout/).
