@@ -1,5 +1,5 @@
 partial
-xkb_symbols "left" {
+xkb_symbols "basic" {
     include "level5(caps_switch)"
     key.type[Group1] = "EIGHT_LEVEL";
 
@@ -33,6 +33,287 @@ xkb_symbols "left" {
         actions[Group1]=[
             NoAction(), NoAction(), NoAction(), NoAction(),	Redirect(key=<VOL+>, clearmods=all)
         ]
+    };
+    key<AD06> {
+        [Any, Any, Any, Any, Home, Home]
+    };
+    key<AD07> {
+        [Any, Any, Any, Any, Left, Left],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(), 
+            Redirect(key = <LEFT>, mods = Control, clearmods = LevelFive),
+            Redirect(key = <LEFT>, mods = Control + Shift, clearmods = LevelFive)
+        ]
+    };
+    key<AD08> {
+        [Any, Any, Any, Any, Up, Up, F11, F11],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <FK11>, clearmods = all),
+            Redirect(key = <FK11>, clearmods = all)
+        ]
+    };
+    key<AD09> {
+        [Any, Any, Any, Any, Right, Right, F12, F12],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(), 
+            Redirect(key = <RGHT>, mods = Control, clearmods = LevelFive),
+            Redirect(key = <RGHT>, mods = Control + Shift, clearmods = LevelFive),
+            Redirect(key = <FK12>, clearmods = all),
+            Redirect(key = <FK12>, clearmods = all)
+        ]
+    };
+    key<AD10> {
+        [Any, Any, Any, Any, End, End]
+    };
+    key<AD11> {
+        [Any, Any, Any, Any]
+    };
+
+    // MIDDLE ROW ==================================================================================
+    key<AC01> {
+        [Any, Any, Any, Any, NoSymbol, NoSymbol, F1, F1],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(), 
+            Redirect(key = <TAB>, mods = Control + Shift, clearmods = LevelFive),
+            Redirect(key = <TAB>, mods = Control + Shift, clearmods = LevelFive),
+            Redirect(key = <FK01>, clearmods = all),
+            Redirect(key = <FK01>, clearmods = all)
+        ]
+    };
+    key<AC02> {
+        [Any, Any, Any, Any, NoSymbol, NoSymbol, F2, F2],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(), 
+            Redirect(key = <TAB>, mods = Control, clearmods = LevelFive),
+            Redirect(key = <TAB>, mods = Control, clearmods = LevelFive),
+            Redirect(key = <FK02>, clearmods = all),
+            Redirect(key = <FK02>, clearmods = all)
+        ]
+    };
+    key<AC03> {
+        [Any, Any, Any, Any, NoSymbol, NoSymbol, F3, F3],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <AD02>, mods = Control, clearmods = LevelFive),
+            Redirect(key = <AD02>, mods = Shift + Control, clearmods = LevelFive),
+            Redirect(key = <FK03>, clearmods = all),
+            Redirect(key = <FK03>, clearmods = all)
+        ]
+    };
+    key<AC04> {
+        [Any, Any, Any, Any, NoSymbol, NoSymbol, F4, F4],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(), 
+            Redirect(key = <AD05>, mods = Control, clearmods = LevelFive),
+            Redirect(key = <AD05>, mods = Shift + Control, clearmods = LevelFive),
+            Redirect(key = <FK04>, clearmods = all),
+            Redirect(key = <FK04>, clearmods = all)
+        ]
+    };
+    key<AC05> {
+        [Any, Any, Any, Any, XF86AudioLowerVolume],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(), Redirect(key=<VOL->, clearmods=all)
+        ]
+    };
+    key<AC06> {
+        [Any, Any, Any, Any, Page_Up, Page_Up],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <PGUP>, clearmods = all),
+            Redirect(key = <PGUP>, clearmods = all)
+        ]
+    };
+    key<AC07> {
+        [Any, Any, Any, Any, Left, Left, F7, F7],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <FK07>, clearmods = all),
+            Redirect(key = <FK07>, clearmods = all)
+        ]
+    };
+    key<AC08> {
+        [Any, Any, Any, Any, Down, Down, F8, F8],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <FK08>, clearmods = all),
+            Redirect(key = <FK08>, clearmods = all)
+        ]
+    };
+    key<AC09> {
+        [Any, Any, Any, Any, Right, Right, F9, F9],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <FK09>, clearmods = all),
+            Redirect(key = <FK09>, clearmods = all)
+        ]
+    };
+    key<AC10> {
+        [Any, Any, Any, Any, BackSpace, BackSpace, F10, F10],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <FK10>, clearmods = all),
+            Redirect(key = <FK10>, clearmods = all)
+        ]
+    };
+    key<AC11> {
+        [Any, Any, Any, Any, Delete, Delete]
+    };
+
+
+    // LOWER ROW ===================================================================================
+    key<LSGT> {
+        [Any, Any, Any, Any]
+    };
+    key<AB01> {
+        [Any, Any, Any, Any, Undo, Redo],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <AB01>, mods = Control, clearmods = LevelFive), 
+            Redirect(key = <AB01>, mods = Shift + Control, clearmods = LevelFive)
+        ]
+    };
+    key<AB02> {
+        [Any, Any, Any, Any, XF86Cut, XF86Cut],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <AB02>, mods = Control, clearmods = LevelFive), 
+            Redirect(key = <AB02>, mods = Shift + Control, clearmods = LevelFive)
+        ]
+    };
+    key<AB03> {
+        [Any, Any, Any, Any, XF86Copy, XF86Copy, F5, F5],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <AB03>, mods = Control, clearmods = LevelFive), 
+            Redirect(key = <AB03>, mods = Shift + Control, clearmods = LevelFive),
+            Redirect(key = <FK05>, clearmods = all),
+            Redirect(key = <FK05>, clearmods = all)
+        ]
+    };
+    key<AB04> {
+        [Any, Any, Any, Any, XF86Paste, XF86Paste],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <AB04>, mods = Control, clearmods = LevelFive), 
+            Redirect(key = <AB04>, mods = Shift + Control, clearmods = LevelFive)
+        ]
+    };
+    key<AB06> {
+        [Any, Any, Any, Any, Page_Down, Page_Down],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <PGDN>, clearmods = all),
+            Redirect(key = <PGDN>, clearmods = all)
+        ]
+    };
+    key<AB07> {
+        [Any, Any, Any, Any, Caps_Lock, Caps_Lock, F6, F6],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(),
+            LockMods(mods=Lock), LockMods(mods=Lock),
+            Redirect(key = <FK06>, clearmods = all),
+            Redirect(key = <FK06>, clearmods = all)
+        ]
+    };
+    key<AB08> {
+        [Any, Any, Any, Any, BackSpace, BackSpace, BackSpace, BackSpace],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <BKSP>, mods = Control, clearmods = LevelFive),
+            Redirect(key = <BKSP>, mods = Control, clearmods = LevelFive),
+            Redirect(key = <BKSP>, mods = Control, clearmods = LevelFive),
+            Redirect(key = <BKSP>, mods = Control, clearmods = LevelFive)
+        ]
+    };
+    key<AB09> {
+        [Any, Any, Any, Any, Delete, Delete, Delete, Delete],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <DELE>, mods = Control, clearmods = LevelFive),
+            Redirect(key = <DELE>, mods = Control, clearmods = LevelFive),
+            Redirect(key = <DELE>, mods = Control, clearmods = LevelFive),
+            Redirect(key = <DELE>, mods = Control, clearmods = LevelFive)
+        ]
+    };
+    key<AB10> {
+        [Any, Any, Any, Any]
+    };
+};
+
+partial
+xkb_symbols "gfkl" {
+    include "level5(caps_switch)"
+    key.type[Group1] = "EIGHT_LEVEL";
+
+    // UPPER ROW ===================================================================================
+    key<AD01> {
+        [Any, Any, Any, Any, XF86AudioPlay],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(), Redirect(key=<I208>, clearmods=all)
+        ]
+    };
+    key<AD02> {
+        [Any, Any, Any, Any, XF86AudioPrev],
+			  actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(), Redirect(key=<I173>, clearmods=all)
+        ]
+    };
+    key<AD03> {
+        [Any, Any, Any, Any, XF86AudioNext],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(), Redirect(key=<I171>, clearmods=all)
+        ]
+    };
+    key<AD04> {
+        [Any, Any, Any, Any, XF86AudioMute],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(),	Redirect(key=<MUTE>, clearmods=all)
+        ]
+    };
+    key<AD05> {
+        [Any, Any, Any, Any, XF86AudioRaiseVolume],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(),	Redirect(key=<VOL+>, clearmods=all)
+        ]
+    };
+    key<AD07> {
+        [Any, Any, Any, Any, Page_Up, Page_Up],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <PGUP>, clearmods = all),
+            Redirect(key = <PGUP>, clearmods = all)
+        ]
+    };
+    key<AD08> {
+        [Any, Any, Any, Any, Home, Home]
+    };
+    key<AD09> {
+        [Any, Any, Any, Any, Left, Left, F11, F11],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(), 
+            Redirect(key = <LEFT>, mods = Control, clearmods = LevelFive),
+            Redirect(key = <LEFT>, mods = Control + Shift, clearmods = LevelFive),
+            Redirect(key = <FK11>, clearmods = all),
+            Redirect(key = <FK11>, clearmods = all)
+        ]
+    };
+    key<AD10> {
+        [Any, Any, Any, Any, Right, Right, F12, F12],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(), 
+            Redirect(key = <RGHT>, mods = Control, clearmods = LevelFive),
+            Redirect(key = <RGHT>, mods = Control + Shift, clearmods = LevelFive),
+            Redirect(key = <FK12>, clearmods = all),
+            Redirect(key = <FK12>, clearmods = all)
+        ]
+    };
+    key<AD11> {
+        [Any, Any, Any, Any, End, End]
+    };
+    key<AD12> {
+        [Any, Any, Any, Any]
     };
 
     // MIDDLE ROW ==================================================================================
@@ -82,225 +363,6 @@ xkb_symbols "left" {
             NoAction(), NoAction(), NoAction(), NoAction(), Redirect(key=<VOL->, clearmods=all)
         ]
     };
-
-    // LOWER ROW ===================================================================================
-    key<LSGT> {
-        [Any, Any, Any, Any]
-    };
-    key<AB01> {
-        [Any, Any, Any, Any, Undo, Redo],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(),
-            Redirect(key = <AD07>, mods = Control, clearmods = LevelFive), 
-            Redirect(key = <AD07>, mods = Shift + Control, clearmods = LevelFive)
-        ]
-    };
-    key<AB02> {
-        [Any, Any, Any, Any, XF86Cut, XF86Cut],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(),
-            Redirect(key = <AB06>, mods = Control, clearmods = LevelFive), 
-            Redirect(key = <AB06>, mods = Shift + Control, clearmods = LevelFive)
-        ]
-    };
-    key<AB03> {
-        [Any, Any, Any, Any, XF86Copy, XF86Copy, F5, F5],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(),
-            Redirect(key = <AD02>, mods = Control, clearmods = LevelFive), 
-            Redirect(key = <AD02>, mods = Shift + Control, clearmods = LevelFive),
-            Redirect(key = <FK05>, clearmods = all),
-            Redirect(key = <FK05>, clearmods = all)
-        ]
-    };
-    key<AB04> {
-        [Any, Any, Any, Any, XF86Paste, XF86Paste],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(),
-            Redirect(key = <AB01>, mods = Control, clearmods = LevelFive), 
-            Redirect(key = <AB01>, mods = Shift + Control, clearmods = LevelFive)
-        ]
-    };
-};
-
-partial
-xkb_symbols "basic" {
-    include "level5(caps_switch)"
-    include "layer5(left)"
-    key.type[Group1] = "EIGHT_LEVEL";
-
-    // UPPER ROW ===================================================================================
-    key<AD06> {
-        [Any, Any, Any, Any, Home, Home]
-    };
-    key<AD07> {
-        [Any, Any, Any, Any, Left, Left],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(), 
-            Redirect(key = <LEFT>, mods = Control, clearmods = LevelFive),
-            Redirect(key = <LEFT>, mods = Control + Shift, clearmods = LevelFive)
-        ]
-    };
-    key<AD08> {
-        [Any, Any, Any, Any, Up, Up, F11, F11],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
-            Redirect(key = <FK11>, clearmods = all),
-            Redirect(key = <FK11>, clearmods = all)
-        ]
-    };
-    key<AD09> {
-        [Any, Any, Any, Any, Right, Right, F12, F12],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(), 
-            Redirect(key = <RGHT>, mods = Control, clearmods = LevelFive),
-            Redirect(key = <RGHT>, mods = Control + Shift, clearmods = LevelFive),
-            Redirect(key = <FK12>, clearmods = all),
-            Redirect(key = <FK12>, clearmods = all)
-        ]
-    };
-    key<AD10> {
-        [Any, Any, Any, Any, End, End]
-    };
-    key<AD11> {
-        [Any, Any, Any, Any]
-    };
-
-    // MIDDLE ROW ==================================================================================
-    key<AC06> {
-        [Any, Any, Any, Any, Page_Up, Page_Up],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(),
-            Redirect(key = <PGUP>, clearmods = all),
-            Redirect(key = <PGUP>, clearmods = all)
-        ]
-    };
-    key<AC07> {
-        [Any, Any, Any, Any, Left, Left, F7, F7],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
-            Redirect(key = <FK07>, clearmods = all),
-            Redirect(key = <FK07>, clearmods = all)
-        ]
-    };
-    key<AC08> {
-        [Any, Any, Any, Any, Down, Down, F8, F8],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
-            Redirect(key = <FK08>, clearmods = all),
-            Redirect(key = <FK08>, clearmods = all)
-        ]
-    };
-    key<AC09> {
-        [Any, Any, Any, Any, Right, Right, F9, F9],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
-            Redirect(key = <FK09>, clearmods = all),
-            Redirect(key = <FK09>, clearmods = all)
-        ]
-    };
-    key<AC10> {
-        [Any, Any, Any, Any, BackSpace, BackSpace, F10, F10],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(), NoAction(), NoAction(),
-            Redirect(key = <FK10>, clearmods = all),
-            Redirect(key = <FK10>, clearmods = all)
-        ]
-    };
-    key<AC11> {
-        [Any, Any, Any, Any, Delete, Delete]
-    };
-
-
-    // LOWER ROW ===================================================================================
-    key<AB06> {
-        [Any, Any, Any, Any, Page_Down, Page_Down],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(),
-            Redirect(key = <PGDN>, clearmods = all),
-            Redirect(key = <PGDN>, clearmods = all)
-        ]
-    };
-    key<AB07> {
-        [Any, Any, Any, Any, Caps_Lock, Caps_Lock, F6, F6],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(),
-            LockMods(mods=Lock), LockMods(mods=Lock),
-            Redirect(key = <FK06>, clearmods = all),
-            Redirect(key = <FK06>, clearmods = all)
-        ]
-    };
-    key<AB08> {
-        [Any, Any, Any, Any, BackSpace, BackSpace, BackSpace, BackSpace],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(),
-            Redirect(key = <BKSP>, mods = Control, clearmods = LevelFive),
-            Redirect(key = <BKSP>, mods = Control, clearmods = LevelFive),
-            Redirect(key = <BKSP>, mods = Control, clearmods = LevelFive),
-            Redirect(key = <BKSP>, mods = Control, clearmods = LevelFive)
-        ]
-    };
-    key<AB09> {
-        [Any, Any, Any, Any, Delete, Delete, Delete, Delete],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(),
-            Redirect(key = <DELE>, mods = Control, clearmods = LevelFive),
-            Redirect(key = <DELE>, mods = Control, clearmods = LevelFive),
-            Redirect(key = <DELE>, mods = Control, clearmods = LevelFive),
-            Redirect(key = <DELE>, mods = Control, clearmods = LevelFive)
-        ]
-    };
-    key<AB10> {
-        [Any, Any, Any, Any]
-    };
-};
-
-partial
-xkb_symbols "gfkl" {
-    include "level5(caps_switch)"
-    include "layer5(left)"
-    key.type[Group1] = "EIGHT_LEVEL";
-
-    // UPPER ROW ===================================================================================
-    key<AD07> {
-        [Any, Any, Any, Any, Page_Up, Page_Up],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(),
-            Redirect(key = <PGUP>, clearmods = all),
-            Redirect(key = <PGUP>, clearmods = all)
-        ]
-    };
-    key<AD08> {
-        [Any, Any, Any, Any, Home, Home]
-    };
-    key<AD09> {
-        [Any, Any, Any, Any, Left, Left, F11, F11],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(), 
-            Redirect(key = <LEFT>, mods = Control, clearmods = LevelFive),
-            Redirect(key = <LEFT>, mods = Control + Shift, clearmods = LevelFive),
-            Redirect(key = <FK11>, clearmods = all),
-            Redirect(key = <FK11>, clearmods = all)
-        ]
-    };
-    key<AD10> {
-        [Any, Any, Any, Any, Right, Right, F12, F12],
-        actions[Group1]=[
-            NoAction(), NoAction(), NoAction(), NoAction(), 
-            Redirect(key = <RGHT>, mods = Control, clearmods = LevelFive),
-            Redirect(key = <RGHT>, mods = Control + Shift, clearmods = LevelFive),
-            Redirect(key = <FK12>, clearmods = all),
-            Redirect(key = <FK12>, clearmods = all)
-        ]
-    };
-    key<AD11> {
-        [Any, Any, Any, Any, End, End]
-    };
-    key<AD12> {
-        [Any, Any, Any, Any]
-    };
-
-    // MIDDLE ROW ==================================================================================
     key<AC07> {
         [Any, Any, Any, Any, Page_Down, Page_Down],
         actions[Group1]=[
@@ -347,6 +409,43 @@ xkb_symbols "gfkl" {
 
 
     // LOWER ROW ===================================================================================
+    key<LSGT> {
+        [Any, Any, Any, Any]
+    };
+    key<AB01> {
+        [Any, Any, Any, Any, Undo, Redo],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <AD07>, mods = Control, clearmods = LevelFive), 
+            Redirect(key = <AD07>, mods = Shift + Control, clearmods = LevelFive)
+        ]
+    };
+    key<AB02> {
+        [Any, Any, Any, Any, XF86Cut, XF86Cut],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <AB06>, mods = Control, clearmods = LevelFive), 
+            Redirect(key = <AB06>, mods = Shift + Control, clearmods = LevelFive)
+        ]
+    };
+    key<AB03> {
+        [Any, Any, Any, Any, XF86Copy, XF86Copy, F5, F5],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <AD02>, mods = Control, clearmods = LevelFive), 
+            Redirect(key = <AD02>, mods = Shift + Control, clearmods = LevelFive),
+            Redirect(key = <FK05>, clearmods = all),
+            Redirect(key = <FK05>, clearmods = all)
+        ]
+    };
+    key<AB04> {
+        [Any, Any, Any, Any, XF86Paste, XF86Paste],
+        actions[Group1]=[
+            NoAction(), NoAction(), NoAction(), NoAction(),
+            Redirect(key = <AB01>, mods = Control, clearmods = LevelFive), 
+            Redirect(key = <AB01>, mods = Shift + Control, clearmods = LevelFive)
+        ]
+    };
     key<AB07> {
         [Any, Any, Any, Any, Caps_Lock, Caps_Lock],
         actions[Group1]=[
